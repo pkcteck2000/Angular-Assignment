@@ -1,0 +1,16 @@
+@import "../../../variables.scss";
+
+.footer {
+    background-color: $footerBackground;
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    .robosoft-copyright {
+        color: $footerTextColor;
+        font-family: Roboto;
+        font-size: 18px;
+        letter-spacing: 0.15px;
+        line-height: 24px;
+    }
+}
