@@ -1,0 +1,28 @@
+@import '../../../variables.scss';
+
+.navbar {
+    box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.1);
+    .navbar-brand {
+        width: 65%;
+        .top-bar-logo-img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    .profile-area {
+        .profile-name {
+            color: $basicBlack;
+        }
+        .profile-img-container {
+            border-radius: 50em;
+            width: 2.8em;
+            height: 2.8em;
+            border: 0.1em solid $robosoftPink;
+            overflow: hidden;
+            .profile-img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
