@@ -3,8 +3,8 @@
 @mixin input-form() {
     .container-fluid {
         background: $pinkGradientBackground;
-        height: 100%;
-    
+        height: 90%;
+
         .container {
             background-color: $basicWhite;
             border-radius: 1.50em;
@@ -13,7 +13,7 @@
             transition: 1s;
             padding-left: 8%;
             padding-right: 8%;
-            margin-top: 7%;
+            margin-top: 8%;
     
             .form {
                 .form-title {
