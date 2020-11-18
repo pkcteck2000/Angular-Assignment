@@ -1,5 +1,5 @@
 @import "../../../variables.scss";
 @import "../../../mixin.scss";
 
-@include input-form();
+@include input-form(29, 38, 8);
 @include overriding-material-input-box();

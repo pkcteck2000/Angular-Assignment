@@ -13,7 +13,6 @@ export class ChangePasswordComponent implements OnInit {
   ) { }
 
   closeForm = () => {
-    console.log("Hello close");
     this.router.navigate(['/']);
   }
 

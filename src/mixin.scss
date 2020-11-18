@@ -1,6 +1,6 @@
 @import "./variables.scss";
 
-@mixin input-form() {
+@mixin input-form($height, $width, $padding) {
     .container-fluid {
         background: $pinkGradientBackground;
         height: 90%;
@@ -8,11 +8,11 @@
         .container {
             background-color: $basicWhite;
             border-radius: 1.50em;
-            width: 38em;
-            height: 29em;
+            width: $width * 1em;
+            height: $height * 1em;
             transition: 1s;
-            padding-left: 8%;
-            padding-right: 8%;
+            padding-left: $padding * 1%;
+            padding-right: $padding * 1%;
             margin-top: 8%;
             position: relative;
 
@@ -44,6 +44,7 @@
                 .forget-password {
                     text-align: center;
                     height: 0.8em;
+                    cursor: pointer;
                     .forget-password-text {
                         opacity: 0.8;
                         color: $basicBlack;
@@ -63,6 +64,14 @@
                     &:focus {
                         outline: none;
                     }
+                }
+                .message-display {
+                    color: $basicBlack;
+                    font-family: Roboto;
+                    font-size: 16px;
+                    letter-spacing: 0;
+                    line-height: 19px;
+                    text-align: center;
                 }
             }
         }
