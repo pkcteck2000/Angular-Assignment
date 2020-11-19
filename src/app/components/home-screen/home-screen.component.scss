@@ -6,13 +6,13 @@
 @include overriding-material-input-box();
 
 .container-fluid {
-    background-color: #F7F7F7;
+    background-color: $homePageBackground;
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.15px;
     
     .row{
         .left-bar {
-            background-color: #fff;
+            background-color: $basicWhite;
             border-radius: 20px;
             .small-pink-btn {
                 border-radius: 1.9em;
@@ -32,7 +32,7 @@
             }
             .left-bar-header{
                 opacity: 0.87;
-                color: #000000;
+                color: $basicBlack;
                 font-family: Roboto;
                 font-size: 24px;
                 letter-spacing: 0;
@@ -41,7 +41,7 @@
             }
             .option-with-background {
                 border-radius: 24px;
-                background-color: rgba(217,39,86,0.05); 
+                background-color: $lightPink; 
             }
             .options-container {
                 font-size: 16px;
@@ -61,13 +61,13 @@
 
         }
         .right-bar {
-            background-color: #fff;
+            background-color: $basicWhite;
             border-radius: 20px;
 
             .input-bar {
                 .input-bar-header {
                     opacity: 0.87;
-                    color: #000000;
+                    color: $basicBlack;
                     font-family: Roboto;
                     font-size: 20px;
                     font-weight: 500;
@@ -90,23 +90,25 @@
                         }
                     }
                     .date-piker-icon-pink {
-                        color: #D92756;
+                        color: $robosoftPink;
                     }
                 }
             }
 
             .menu-bar {
                 .menu-container {
+                     border-left: 2px solid $robosoftPink;
+
                     .menu-with-background {
                         display: flex;
                         align-items: center;
-                        background-color: rgba(217,39,86,0.05);
+                        background-color: $lightPink;
                         margin-bottom: 10%;
                         border-radius: 10px;
                         color: $robosoftPink;
                         padding: 6%;
                         .menu-text {
-                            color: #D92756;
+                            color: $robosoftPink;
                             font-family: Roboto;
                             font-size: 14px;
                             font-weight: 500;
