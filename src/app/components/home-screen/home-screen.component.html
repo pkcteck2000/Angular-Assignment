@@ -1,6 +1,6 @@
 <div class="container-fluid pt-3 pb-3 pl-0 pl-md-5">
     <div class="row">
-        <div class="prem col-12 col-md-3">
+        <div class="col-12 col-md-3">
             <div class="left-bar p-4 shadow-sm ml-3 ml-md-4">
                 <span class="left-bar-header">Your <br />Questionnaires</span>
                 <div class="d-flex justify-content-center pt-3">
@@ -27,9 +27,104 @@
                 </div>
             </div>
         </div>
-        <div class="col-9 pr-5">
-            <div class="right-bar mr-">
-                Hello
+        <div class="col-12 col-md-9 pr-md-5 mt-4 mt-sm-0">
+            <div class="right-bar shadow-sm ml-3 ml-md-0 mr-md-5">
+                <div class="row">
+                    <div class="col-12 col-md-8 p-3 input-bar">
+                        <span class="input-bar-header ml-3">Questionnaire</span>
+                        <form class="input-form m-3">
+                            <mat-form-field class="input-area-full" appearance="outline">
+                                <mat-label>Enter Title</mat-label>
+                                <input matInput type="text"/>
+                                <mat-hint>Please enter appropriate title</mat-hint>
+                            </mat-form-field>
+
+                            <mat-form-field class="input-area-full" appearance="outline">
+                                <mat-label>Description</mat-label>
+                                <textarea matInput></textarea>
+                            </mat-form-field>
+
+                            <mat-form-field class="input-area-medium pr-4" appearance="outline">
+                                <mat-label>Button Title</mat-label>
+                                <input matInput type="text"/>
+                             </mat-form-field>
+
+                            <mat-form-field class="input-area-medium" appearance="outline">
+                                <mat-label>Button Text</mat-label>
+                                <input matInput type="text"/>
+                            </mat-form-field>
+                            
+                            <mat-form-field class="input-area-full mb-4" appearance="outline">
+                                <mat-label>Check box text</mat-label>
+                                <input matInput type="text"/>
+                            </mat-form-field>
+
+                            <span class="input-bar-header">Additional Details</span>
+                            <div class="additional-details">
+
+                                <mat-form-field class="input-area-small pr-3" appearance="outline">
+                                    <mat-label>Select Start Date</mat-label>
+                                    <input matInput [matDatepicker]="picker1">
+                                    <mat-datepicker-toggle matSuffix class="date-piker-icon-pink" [for]="picker1"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker1></mat-datepicker>
+                                </mat-form-field>
+
+                                <mat-form-field class="input-area-small pr-3" appearance="outline">
+                                    <mat-label>Select End Date</mat-label>
+                                    <input matInput [matDatepicker]="picker2">
+                                    <mat-datepicker-toggle matSuffix class="date-piker-icon-pink" [for]="picker2"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker2></mat-datepicker>
+                                </mat-form-field>
+
+                                <mat-form-field class="input-area-small" appearance="outline">
+                                    <mat-label>Auto Reminder</mat-label>
+                                    <input matInput type="text"/>
+                                </mat-form-field>
+
+                                <mat-form-field class="input-area-medium pr-4" appearance="outline">
+                                    <mat-label>Select Content PPT File</mat-label>
+                                    <input matInput type="text"/>
+                                </mat-form-field>
+
+                                <mat-form-field class="input-area-medium" appearance="outline">
+                                    <mat-label>Select participant xl sheet</mat-label>
+                                    <input matInput type="text"/>
+                                </mat-form-field>
+
+                                <mat-form-field class="input-area-full" appearance="outline">
+                                    <mat-label>Mail Body</mat-label>
+                                    <textarea matInput></textarea>
+                                </mat-form-field>
+
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col-12 col-md-4 menu-bar">
+                        <div class="menu-container p-4 pl-3">
+                            <div class="menu-with-background">
+                                <mat-icon class="mat-icon">save</mat-icon>
+                                <span class="menu-text">SAVE</span>
+                            </div>
+                            <div class="menu-with-background">
+                                <mat-icon class="mat-icon">preview</mat-icon>
+                                <span class="menu-text">PREVIEW</span>
+                            </div>
+                            <div class="menu-with-background">
+                                <mat-icon class="mat-icon">publish</mat-icon>
+                                <span class="menu-text">PUBLISH</span>
+                            </div>
+                            <div class="menu-with-background">
+                                <mat-icon class="mat-icon">add_alert</mat-icon>
+                                <span class="menu-text">REMIND</span>
+                            </div>
+                            <div class="menu-with-background">
+                                <mat-icon class="mat-icon">receipt</mat-icon>
+                                <span class="menu-text">GENERATE REPORT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

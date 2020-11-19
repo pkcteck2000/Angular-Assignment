@@ -13,6 +13,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { ChangePasswordComponent } from './components/change-password/change-password.component';
 import { HomeScreenComponent } from './components/home-screen/home-screen.component';
 import { MessageDisplayComponent } from './components/message-display/message-display.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { MessageDisplayComponent } from './components/message-display/message-di
     BrowserAnimationsModule,
     MatInputModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
