@@ -1,0 +1,77 @@
+@import "../../../variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+.container-fluid {
+    background-color: #F7F7F7;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.15px;
+    
+    .row{
+        
+        //margin-left: 2em;
+        //padding-right: 5.5em;
+
+        .left-bar {
+            background-color: #fff;
+            border-radius: 20px;
+            .small-pink-btn {
+                border-radius: 1.9em;
+                width: 16.8em;
+                height: 3.4em;
+                background-color: $robosoftPink;
+                color: $basicWhite;
+                .btn-text{
+                    font-family: 'Roboto', sans-serif;
+                    letter-spacing: 1.25px;
+                    line-height: 28px;
+                    white-space: normal;
+                }
+                &:focus {
+                    outline: none;
+                }
+            }
+            .left-bar-header{
+                opacity: 0.87;
+                color: #000000;
+                font-family: Roboto;
+                font-size: 24px;
+                letter-spacing: 0;
+                line-height: 28px;
+                word-wrap: break-word;
+            }
+            .option-with-background {
+                background-color: darkorange;
+                border-radius: 24px;
+                background-color: rgba(217,39,86,0.05);
+                
+            }
+            .options-container {
+                font-size: 16px;
+                cursor: pointer;
+                .option {
+                    padding-top: 18%;
+                    padding-left: 5%;
+                    .mat-icon {
+                        float: right;
+                        font-weight: bold;
+                        font-size: 30px;
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+
+        }
+        .right-bar {
+            background-color: #fff;
+            border-radius: 20px;
+        }
+    }
+}
+
+.prem {
+    //display: flex;
+    //background-color: darkorange;
+    //width: 100%;
+}
