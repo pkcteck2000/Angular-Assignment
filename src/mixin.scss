@@ -1,5 +1,4 @@
 @import "./variables.scss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 
 @mixin input-form($height, $width, $padding) {
     .container-fluid {
@@ -32,7 +31,7 @@
                 .form-title {
                     text-align: center;
                     padding: 0.9em;
-                    font-family: 'Inter', sans-serif;
+                    font-family: $inter;
                     font-size: 1.8em;
                     font-weight: 31.25em;
                     letter-spacing: 0;
@@ -49,27 +48,18 @@
                     .forget-password-text {
                         opacity: 0.8;
                         color: $basicBlack;
-                        font-family: Roboto;
+                        font-family: $roboto;
                         font-size: 1em;
                         letter-spacing: 0;
                         line-height: 0.8em;
                     }
                 }
-                .small-pink-btn {
-                    font-weight: bold;
-                    border-radius: 1.9em;
-                    width: 11em;
-                    height: 3.5em;
-                    background-color: $robosoftPink;
-                    color: $basicWhite;
-                    font-family: 'Inter', sans-serif;
-                    &:focus {
-                        outline: none;
-                    }
-                }
+
+                @include custom-button(11em, $robosoftPink);
+
                 .message-display {
                     color: $basicBlack;
-                    font-family: Roboto;
+                    font-family: $roboto;
                     font-size: 16px;
                     letter-spacing: 0;
                     line-height: 19px;
@@ -80,15 +70,15 @@
     }    
 }
 
-@mixin custom-button() {
-    .small-pink-btn {
+@mixin custom-button($width, $color) {
+    .custom-btn {
         border-radius: 1.9em;
-        width: 100%;
-        height: 3.4em;
-        background-color: $robosoftPink;
+        width: $width;
+        height: 3.5em;
+        background-color: $color;
         color: $basicWhite;
         .btn-text{
-            font-family: 'Roboto', sans-serif;
+            font-family: $roboto;
             letter-spacing: 1.25px;
             line-height: 28px;
             white-space: normal;

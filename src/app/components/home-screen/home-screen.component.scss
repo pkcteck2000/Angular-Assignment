@@ -7,11 +7,8 @@
 
 .container-fluid {
     background-color: $homePageBackground;
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 0.15px;
     
     .row {
-        
         .right-bar {
             background-color: $basicWhite;
             border-radius: 20px;
@@ -20,7 +17,7 @@
                 .input-bar-header {
                     opacity: 0.87;
                     color: $basicBlack;
-                    font-family: Roboto;
+                    font-family: $roboto;
                     font-size: 20px;
                     font-weight: 500;
                     letter-spacing: 0.15px;

@@ -1,18 +1,16 @@
 @import "../../../variables.scss";
 @import "../../../mixin.scss";
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 
 .left-bar {
     background-color: $basicWhite;
     border-radius: 20px;
     
-    @include custom-button();
+    @include custom-button(100%, $robosoftPink);
 
     .left-bar-header{
         opacity: 0.87;
         color: $basicBlack;
-        font-family: Roboto;
+        font-family: $roboto;
         font-size: 24px;
         letter-spacing: 0;
         line-height: 28px;
