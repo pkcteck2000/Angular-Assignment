@@ -1,38 +1,14 @@
 <div class="container-fluid pt-3 pb-3 pl-0 pl-md-5">
     <div class="row">
         <div class="col-12 col-md-3">
-            <div class="left-bar p-4 shadow-sm ml-3 ml-md-4">
-                <span class="left-bar-header">Your <br />Questionnaires</span>
-                <div class="d-flex justify-content-center pt-3">
-                    <button class="small-pink-btn mt-4" mat-raised-button>
-                        <div class="btn-text">New Questionnaire</div>
-                    </button>
-                </div>
-                <div class="options-container mt-2 pt-4 pb-5">
-                    <div class="option-with-background p-3">
-                        <span class="option-text">Secure coding Guidel...</span>
-                    </div>
-                    <div class="option">
-                        <span class="option-text"> ISMS Questionnaire </span>
-                        <mat-icon class="mat-icon">keyboard_arrow_right</mat-icon>
-                    </div>
-                    <div class="option">
-                        <span class="option-text"> PA Questionnaire </span>
-                        <mat-icon>keyboard_arrow_right</mat-icon>
-                    </div>
-                    <div class="option">
-                        <span class="option-text"> Process Guidelines </span>
-                        <mat-icon>keyboard_arrow_right</mat-icon>
-                    </div>
-                </div>
-            </div>
+            <app-home-left-bar></app-home-left-bar>
         </div>
         <div class="col-12 col-md-9 pr-md-5 mt-4 mt-sm-0">
             <div class="right-bar shadow-sm ml-3 ml-md-0 mr-md-5">
                 <div class="row">
-                    <div class="col-12 col-md-8 pt-4 pr-2 input-bar">
+                    <div class="col-12 col-md-8 pt-4 pr-4 pr-sm-0 pr-2 input-bar">
                         <span class="input-bar-header ml-3">Questionnaire</span>
-                        <form class="input-form ml-3">
+                        <form class="input-form ml-3 pr-2">
                             <mat-form-field class="input-area-full" appearance="outline">
                                 <mat-label>Enter Title</mat-label>
                                 <input matInput type="text"/>

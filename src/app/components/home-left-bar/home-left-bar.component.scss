@@ -1,0 +1,38 @@
+@import "../../../variables.scss";
+@import "../../../mixin.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+.left-bar {
+    background-color: $basicWhite;
+    border-radius: 20px;
+    
+    @include custom-button();
+
+    .left-bar-header{
+        opacity: 0.87;
+        color: $basicBlack;
+        font-family: Roboto;
+        font-size: 24px;
+        letter-spacing: 0;
+        line-height: 28px;
+        word-wrap: break-word;
+    }
+    @include light-pink-background();
+
+    .options-container {
+        font-size: 16px;
+        cursor: pointer;
+        .option {
+            padding-top: 18%;
+            padding-left: 5%;
+            .mat-icon {
+                float: right;
+                font-weight: bold;
+                font-size: 30px;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}

@@ -15,6 +15,7 @@ import { HomeScreenComponent } from './components/home-screen/home-screen.compon
 import { MessageDisplayComponent } from './components/message-display/message-display.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { HomeLeftBarComponent } from './components/home-left-bar/home-left-bar.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     LoginComponent,
     ChangePasswordComponent,
     HomeScreenComponent,
-    MessageDisplayComponent
+    MessageDisplayComponent,
+    HomeLeftBarComponent
   ],
   imports: [
     BrowserModule,
