@@ -41,7 +41,7 @@
                                 <mat-form-field class="input-area-small pr-1" appearance="outline">
                                     <mat-label>Select Start Date</mat-label>
                                     <input matInput [matDatepicker]="picker1">
-                                    <mat-datepicker-toggle matSuffix class="date-piker-icon-pink" [for]="picker1">
+                                    <mat-datepicker-toggle matSuffix class="icon-pink" [for]="picker1">
                                     </mat-datepicker-toggle>
                                     <mat-datepicker #picker1></mat-datepicker>
                                 </mat-form-field>
@@ -49,7 +49,7 @@
                                 <mat-form-field class="input-area-small pl-1" appearance="outline">
                                     <mat-label>Select End Date</mat-label>
                                     <input matInput [matDatepicker]="picker2">
-                                    <mat-datepicker-toggle matSuffix class="date-piker-icon-pink" [for]="picker2">
+                                    <mat-datepicker-toggle matSuffix class="icon-pink" [for]="picker2">
                                     </mat-datepicker-toggle>
                                     <mat-datepicker #picker2></mat-datepicker>
                                 </mat-form-field>
@@ -57,15 +57,18 @@
                                 <mat-form-field class="input-area-small pl-2" appearance="outline">
                                     <mat-label>Auto Reminder</mat-label>
                                     <input matInput type="text" />
+                                    <span matSuffix class="input-suffix">Days</span>
                                 </mat-form-field>
 
                                 <mat-form-field class="input-area-medium pr-4" appearance="outline">
                                     <mat-label>Select Content PPT File</mat-label>
                                     <input matInput type="text" />
+                                    <mat-icon matSuffix class="icon-pink">cloud_upload</mat-icon>
                                 </mat-form-field>
 
                                 <mat-form-field class="input-area-medium" appearance="outline">
                                     <mat-label>Select participant xl sheet</mat-label>
+                                    <mat-icon matSuffix class="icon-pink">cloud_upload</mat-icon>
                                     <input matInput type="text" />
                                 </mat-form-field>
 

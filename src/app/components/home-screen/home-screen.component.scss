@@ -29,9 +29,18 @@
 
                     .additional-details {
                         @include input-area-small();
+                        .input-suffix {
+                            position: relative;
+                            bottom: 5px;
+                            color: $footerTextColor;
+                            font-family: $roboto;
+                            font-size: 16px;
+                            letter-spacing: 0.15px;
+                        }
                     }
-                    .date-piker-icon-pink {
+                    .icon-pink {
                         color: $robosoftPink;
+                        cursor: pointer;
                     }
                 }
             }            
