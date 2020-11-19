@@ -1,12 +1,12 @@
 <div class="container-fluid pt-3 pb-3 pl-0 pl-md-5">
     <div class="row">
-        <div class="col-12 col-md-3">
+        <div class="col-12 col-md-3 pr-md-2">
             <app-home-left-bar></app-home-left-bar>
         </div>
         <div class="col-12 col-md-9 pr-md-5 mt-4 mt-sm-0">
             <div class="right-bar shadow-sm ml-3 ml-md-0 mr-md-5">
                 <div class="row">
-                    <div class="col-12 col-md-8 pt-4 pr-4 pr-sm-0 pr-2 input-bar">
+                    <div class="col-12 col-md-8 pt-4 pr-4 pr-sm-0 input-bar">
                         <span class="input-bar-header ml-3">Questionnaire</span>
                         <form class="input-form ml-3 pr-2">
                             <mat-form-field class="input-area-full" appearance="outline">
@@ -75,30 +75,8 @@
                             </div>
                         </form>
                     </div>
-
-                    <div class="col-12 col-md-4 menu-bar mt-4">
-                        <div class="menu-container pt-0 pl-4 pr-4 pb-4">
-                            <div class="menu-with-background">
-                                <mat-icon class="mat-icon">save</mat-icon>
-                                <span class="menu-text">SAVE</span>
-                            </div>
-                            <div class="menu-with-background">
-                                <mat-icon class="mat-icon">preview</mat-icon>
-                                <span class="menu-text">PREVIEW</span>
-                            </div>
-                            <div class="menu-with-background">
-                                <mat-icon class="mat-icon">publish</mat-icon>
-                                <span class="menu-text">PUBLISH</span>
-                            </div>
-                            <div class="menu-with-background">
-                                <mat-icon class="mat-icon">add_alert</mat-icon>
-                                <span class="menu-text">REMIND</span>
-                            </div>
-                            <div class="menu-with-background">
-                                <mat-icon class="mat-icon">article</mat-icon>
-                                <span class="menu-text">GENERATE REPORT</span>
-                            </div>
-                        </div>
+                    <div class="col-12 col-md-4 mt-4">
+                        <app-home-screen-menu></app-home-screen-menu>
                     </div>
                 </div>
             </div>
