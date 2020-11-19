@@ -1,17 +1,17 @@
-<div class="container-fluid pt-3 pb-3 pl-0 pl-md-5">
+<div class="container-fluid pt-3 pb-3 pl-0 pl-lg-5">
     <div class="row">
-        <div class="col-12 col-md-3 pr-md-2">
+        <div class="col-12 col-sm-4 col-lg-3 pr-sm-0">
             <app-home-left-bar></app-home-left-bar>
         </div>
-        <div class="col-12 col-md-9 pr-md-5 mt-4 mt-sm-0">
-            <div class="right-bar shadow-sm ml-3 ml-md-0 mr-md-5">
+        <div class="col-12 col-sm-8 col-lg-9 pr-4 pr-sm-0 pr-lg-5 mt-4 mt-sm-0">
+            <div class="right-bar shadow-sm ml-3 ml-sm-3 mr-sm-4 mr-md-5">
                 <div class="row">
-                    <div class="col-12 col-md-8 pt-4 pr-4 pr-sm-0 input-bar">
+                    <div class="col-12 col-lg-8 pt-4 pr-4 pr-lg-0 input-bar">
                         <span class="input-bar-header ml-3">Questionnaire</span>
                         <form class="input-form ml-3 pr-2">
                             <mat-form-field class="input-area-full" appearance="outline">
                                 <mat-label>Enter Title</mat-label>
-                                <input matInput type="text"/>
+                                <input matInput type="text" />
                                 <mat-hint>Please enter appropriate title</mat-hint>
                             </mat-form-field>
 
@@ -20,51 +20,53 @@
                                 <textarea matInput></textarea>
                             </mat-form-field>
 
-                            <mat-form-field class="input-area-medium pr-4" appearance="outline">
+                            <mat-form-field class="input-area-medium pr-2" appearance="outline">
                                 <mat-label>Button Title</mat-label>
-                                <input matInput type="text"/>
-                             </mat-form-field>
-
-                            <mat-form-field class="input-area-medium" appearance="outline">
-                                <mat-label>Button Text</mat-label>
-                                <input matInput type="text"/>
+                                <input matInput type="text" />
                             </mat-form-field>
-                            
+
+                            <mat-form-field class="input-area-medium pl-2" appearance="outline">
+                                <mat-label>Button Text</mat-label>
+                                <input matInput type="text" />
+                            </mat-form-field>
+
                             <mat-form-field class="input-area-full mb-4" appearance="outline">
                                 <mat-label>Check box text</mat-label>
-                                <input matInput type="text"/>
+                                <input matInput type="text" />
                             </mat-form-field>
 
                             <span class="input-bar-header">Additional Details</span>
                             <div class="additional-details">
 
-                                <mat-form-field class="input-area-small pr-3" appearance="outline">
+                                <mat-form-field class="input-area-small pr-1" appearance="outline">
                                     <mat-label>Select Start Date</mat-label>
                                     <input matInput [matDatepicker]="picker1">
-                                    <mat-datepicker-toggle matSuffix class="date-piker-icon-pink" [for]="picker1"></mat-datepicker-toggle>
+                                    <mat-datepicker-toggle matSuffix class="date-piker-icon-pink" [for]="picker1">
+                                    </mat-datepicker-toggle>
                                     <mat-datepicker #picker1></mat-datepicker>
                                 </mat-form-field>
 
-                                <mat-form-field class="input-area-small pr-3" appearance="outline">
+                                <mat-form-field class="input-area-small pl-1" appearance="outline">
                                     <mat-label>Select End Date</mat-label>
                                     <input matInput [matDatepicker]="picker2">
-                                    <mat-datepicker-toggle matSuffix class="date-piker-icon-pink" [for]="picker2"></mat-datepicker-toggle>
+                                    <mat-datepicker-toggle matSuffix class="date-piker-icon-pink" [for]="picker2">
+                                    </mat-datepicker-toggle>
                                     <mat-datepicker #picker2></mat-datepicker>
                                 </mat-form-field>
 
-                                <mat-form-field class="input-area-small" appearance="outline">
+                                <mat-form-field class="input-area-small pl-2" appearance="outline">
                                     <mat-label>Auto Reminder</mat-label>
-                                    <input matInput type="text"/>
+                                    <input matInput type="text" />
                                 </mat-form-field>
 
                                 <mat-form-field class="input-area-medium pr-4" appearance="outline">
                                     <mat-label>Select Content PPT File</mat-label>
-                                    <input matInput type="text"/>
+                                    <input matInput type="text" />
                                 </mat-form-field>
 
                                 <mat-form-field class="input-area-medium" appearance="outline">
                                     <mat-label>Select participant xl sheet</mat-label>
-                                    <input matInput type="text"/>
+                                    <input matInput type="text" />
                                 </mat-form-field>
 
                                 <mat-form-field class="input-area-full" appearance="outline">
@@ -75,7 +77,7 @@
                             </div>
                         </form>
                     </div>
-                    <div class="col-12 col-md-4 mt-4">
+                    <div class="col-12 col-lg-4 mt-4">
                         <app-home-screen-menu></app-home-screen-menu>
                     </div>
                 </div>

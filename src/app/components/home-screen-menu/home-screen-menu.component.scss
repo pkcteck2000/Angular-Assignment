@@ -2,8 +2,6 @@
 @import "../../../mixin.scss";
 
 .menu-container {
-    border-left: 2px solid $robosoftPink;
-
     .menu-with-background {
         display: flex;
         align-items: center;
@@ -12,6 +10,7 @@
         border-radius: 10px;
         color: $robosoftPink;
         padding: 6%;
+        cursor: pointer;
         .menu-text {
             color: $robosoftPink;
             font-family: $roboto;
@@ -21,5 +20,12 @@
             line-height: 16px;
             padding-left: 5%;
         }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .menu-container
+    {
+        border-left: 2px solid $robosoftPink;
     }
 }
