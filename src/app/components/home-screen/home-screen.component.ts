@@ -5,7 +5,16 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './home-screen.component.html',
   styleUrls: ['./home-screen.component.scss']
 })
+
 export class HomeScreenComponent implements OnInit {
+
+  closeIcon = "add";
+  overlay = false;
+
+  toggleOverlayMode = () => {
+    this.overlay = !this.overlay;
+    this.closeIcon = this.closeIcon === "add"? "close" : "add";
+  }
 
   constructor() { }
 

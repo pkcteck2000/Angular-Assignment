@@ -80,11 +80,34 @@
                             </div>
                         </form>
                     </div>
-                    <div class="col-12 col-lg-4 mt-4">
+                    <div class="col-12 col-lg-4 mt-4 pb-5">
                         <app-home-screen-menu></app-home-screen-menu>
                     </div>
                 </div>
+
+                <div class="toggle-options-container">
+                    <span class="toggle-options" [hidden]="!overlay">
+                        <div routerLink="/update-password" class="light-pink-background shadow">
+                            Change Password
+                        </div>
+                        <div class="light-pink-background shadow">
+                            Add/Remove Super Admins
+                        </div>
+                        <div class="light-pink-background shadow">
+                            Add/Remove Admins
+                        </div>
+                    </span>
+                    <div class="fab-button-container p-4" (click)="toggleOverlayMode()">
+                        <button mat-fab class="fab-button" aria-label="Example icon button with a delete icon">
+                            <mat-icon>{{ closeIcon }}</mat-icon>
+                        </button>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
+</div>
+
+<div class="overlay" [hidden]="!overlay">
 </div>

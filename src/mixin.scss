@@ -110,15 +110,33 @@
     }
 }
 
-@mixin light-pink-background() {
+@mixin fabButton($color) {
+    .fab-button {
+        background-color: $color;
+        outline: none;
+    }    
+}
+
+@mixin lightPinkBackground() {
     .light-pink-background {
         border-radius: 24px;
         background-color: $lightPink; 
     }
 }
 
-
-
+@mixin overlayMode() {
+    .overlay {
+        position: fixed;
+        display: block;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $overlayBackground;
+        z-index: 1;
+        cursor: pointer;
+    } 
+}
 
 
 

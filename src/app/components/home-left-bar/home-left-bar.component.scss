@@ -16,7 +16,7 @@
         line-height: 28px;
         word-wrap: break-word;
     }
-    @include light-pink-background();
+    @include lightPinkBackground();
 
     .options-container {
         font-size: 16px;
