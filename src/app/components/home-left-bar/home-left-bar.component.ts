@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeLeftBarComponent implements OnInit {
 
+  OPTIONS = [
+      "Secure coding Guidelence",
+      "ISMS Questionnaire",
+      "PA Questionnaire",
+      "Process Guidelines"
+  ];
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
 }
+
+//textSlice:0:20

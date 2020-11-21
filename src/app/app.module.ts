@@ -15,6 +15,7 @@ import { HomeScreenMenuComponent } from './components/home-screen-menu/home-scre
 import { AddRemoveAdminsComponent } from './components/add-remove-admins/add-remove-admins.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularMaterialsModule } from './modules/angular-materials/angular-materials.module';
+import { TextSlicePipe } from './pipes/text-slice.pipe';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AngularMaterialsModule } from './modules/angular-materials/angular-mate
     MessageDisplayComponent,
     HomeLeftBarComponent,
     HomeScreenMenuComponent,
-    AddRemoveAdminsComponent
+    AddRemoveAdminsComponent,
+    TextSlicePipe
   ],
   imports: [
     BrowserModule,
