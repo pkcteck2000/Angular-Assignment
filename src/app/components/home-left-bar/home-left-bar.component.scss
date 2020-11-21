@@ -22,14 +22,26 @@
         font-size: 1.2em; // 16px;
         cursor: pointer;
         .option {
-            padding-top: 18%;
+            padding-top: 5%;
+            padding-bottom: 5%;
             padding-left: 5%;
+            margin-top: 5%;
+            margin-bottom: 5%;
             .mat-icon {
                 float: right;
                 font-weight: bold;
                 font-size: 1.87em; //30px;
                 display: flex;
                 align-items: center;
+                margin-right: 5%;
+            }
+        }
+        .active {
+            border-radius: 1.5em; // 24px
+            background-color: $lightPink;
+            color: $basicBlack;
+            .mat-icon {
+                display: none !important;
             }
         }
     }
