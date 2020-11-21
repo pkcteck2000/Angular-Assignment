@@ -7,20 +7,14 @@ import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatInputModule} from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
-import {MatIconModule} from '@angular/material/icon';
 import { ChangePasswordComponent } from './components/change-password/change-password.component';
 import { HomeScreenComponent } from './components/home-screen/home-screen.component';
 import { MessageDisplayComponent } from './components/message-display/message-display.component';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core';
 import { HomeLeftBarComponent } from './components/home-left-bar/home-left-bar.component';
 import { HomeScreenMenuComponent } from './components/home-screen-menu/home-screen-menu.component';
 import { AddRemoveAdminsComponent } from './components/add-remove-admins/add-remove-admins.component';
-import { MaterialFileInputModule } from 'ngx-material-file-input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { AngularMaterialsModule } from './modules/angular-materials/angular-materials.module';
 
 @NgModule({
   declarations: [
@@ -39,15 +33,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatInputModule,
-    MatButtonModule,
-    MatIconModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MaterialFileInputModule,
     FormsModule,
     ReactiveFormsModule,
-    MatFormFieldModule
+    AngularMaterialsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
