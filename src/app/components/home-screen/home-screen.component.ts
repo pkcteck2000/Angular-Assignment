@@ -19,6 +19,7 @@ export class HomeScreenComponent implements OnInit {
   }
 
   toggleModal = ( addType ) => {
+    console.log(addType);
     this.addAdminType = addType=="admin"?"Add/Remove Admins":"Add/Remove Super Admins";
     $("#myModal").click();
   }

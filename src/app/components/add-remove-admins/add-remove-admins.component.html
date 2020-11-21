@@ -60,13 +60,15 @@
                     </button>
                 </div>
             </div>
-            <div class="form-button float-lg-right pt-4">
-                <button type="button" class="custom-btn" mat-raised-button (click)="updateAdmin()">
-                    <div class="btn-text">Update</div>
-                </button>
-                <button type="button" class="custom-btn ml-3" mat-raised-button type="button">
-                    <div class="btn-text">Cancel</div>
-                </button>
+            <div class="row mb-5">
+                <div class="col-12 col-md-10 col-lg-10 form-button float-lg-right pt-4">
+                    <button type="button" class="custom-btn" mat-raised-button (click)="updateAdmin()">
+                        <div class="btn-text">Update</div>
+                    </button>
+                    <button type="button" class="custom-btn ml-3 mr-4 mr-sm-0" mat-raised-button type="button" (click)="notify.emit('admin')">
+                        <div class="btn-text">Cancel</div>
+                    </button>
+                </div>
             </div>
         </form>
     </div>

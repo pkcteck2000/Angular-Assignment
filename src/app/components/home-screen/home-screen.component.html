@@ -124,7 +124,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <app-add-remove-admins [addAdminType]="addAdminType"></app-add-remove-admins>
+                <app-add-remove-admins (notify)="toggleModal($event)" [addAdminType]="addAdminType"></app-add-remove-admins>
             </div>
       </div>
     </div>
