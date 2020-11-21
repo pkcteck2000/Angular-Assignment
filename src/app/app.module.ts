@@ -17,6 +17,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { HomeLeftBarComponent } from './components/home-left-bar/home-left-bar.component';
 import { HomeScreenMenuComponent } from './components/home-screen-menu/home-screen-menu.component';
+import { AddRemoveAdminsComponent } from './components/add-remove-admins/add-remove-admins.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HomeScreenMenuComponent } from './components/home-screen-menu/home-scre
     HomeScreenComponent,
     MessageDisplayComponent,
     HomeLeftBarComponent,
-    HomeScreenMenuComponent
+    HomeScreenMenuComponent,
+    AddRemoveAdminsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,74 @@
+<div class="container-fluid pl-4">
+    <div class="form-container">
+        <form class="form">
+            <div class="form-title pl-3 pb-3">
+                <span class="text">
+                    {{ addAdminType }}
+                </span>
+            </div>
+            <div class="row pl-3 pb-3 editing-area-1">
+                <div class="col-12 col-md-3 pl-0 pl-md-3">
+                    <mat-form-field class="input-area-full" appearance="outline">
+                        <mat-label>Enter Name</mat-label>
+                        <input matInput type="password" />
+                    </mat-form-field>
+                </div>
+                <div class="col-12 col-md-3 pl-0">
+                    <mat-form-field class="input-area-full" appearance="outline">
+                        <mat-label>Enter Employee Code</mat-label>
+                        <input matInput type="password" />
+                    </mat-form-field>
+                </div>
+                <div class="col-12 col-md-4 pl-0">
+                    <mat-form-field class="input-area-full" appearance="outline">
+                        <mat-label>Enter Mail ID</mat-label>
+                        <input matInput type="password" />
+                    </mat-form-field>
+                </div>
+                <div class="col-12 col-md-2 pl-0 mt-1">
+                    <button type="button" mat-fab class="fab-button" aria-label="add icon">
+                        <mat-icon>add</mat-icon>
+                    </button>
+                </div>
+            </div>
+
+            <div class="row pl-3 pt-3 editing-area-2">
+                <div class="col-12 col-md-3 pl-0 pl-md-3">
+                    <mat-form-field class="input-area-full" appearance="outline">
+                        <mat-label>Enter Name</mat-label>
+                        <input matInput type="password" />
+                    </mat-form-field>
+                </div>
+                <div class="col-12 col-md-3 pl-0">
+                    <mat-form-field class="input-area-full" appearance="outline">
+                        <mat-label>Enter Employee Code</mat-label>
+                        <input matInput type="password" />
+                    </mat-form-field>
+                </div>
+                <div class="col-12 col-md-4 pl-0">
+                    <mat-form-field class="input-area-full" appearance="outline">
+                        <mat-label>Enter Mail ID</mat-label>
+                        <input matInput type="password" />
+                    </mat-form-field>
+                </div>
+                <div class="col-12 col-md-12 col-lg-2 pl-0 mt-2">
+                    <button type="button" mat-fab class="fab-button" aria-label="edit icon">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                    <button type="button" mat-fab class="fab-button ml-3" aria-label="delete icon">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </div>
+            </div>
+            <div class="form-button float-lg-right pt-4">
+                <button type="button" class="custom-btn" mat-raised-button (click)="updateAdmin()">
+                    <div class="btn-text">Update</div>
+                </button>
+                <button type="button" class="custom-btn ml-3" mat-raised-button type="button">
+                    <div class="btn-text">Cancel</div>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+

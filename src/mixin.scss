@@ -16,27 +16,11 @@
             margin-top: 8%;
             position: relative;
 
-            .close-form {
-                position: absolute;
-                color: $basicBlack;
-                top: 0.4em;
-                right: 0.4em;
-                transform: rotate(45deg);
-                font-size: 3.5em;
-                color: $custom-label-color;
-                cursor: pointer;
-            }
+            @include closeFormIcon();
 
             .form {
-                .form-title {
-                    text-align: center;
-                    padding: 0.9em;
-                    font-family: $inter;
-                    font-size: 1.8em;
-                    font-weight: 31.25em;
-                    letter-spacing: 0;
-                    line-height: 1.9em;
-                }
+                @include formTitle();
+
                 .input-area {
                     width: 100%;
                     font-size: 1em;
@@ -68,6 +52,31 @@
             }
         }
     }    
+}
+
+@mixin formTitle($textAlign:center, $padding:0.9em) {
+    .form-title {
+        text-align: $textAlign;
+        padding: $padding;
+        font-family: $inter;
+        font-size: 1.8em;
+        font-weight: 31.25em;
+        letter-spacing: 0;
+        line-height: 1.9em;
+    }    
+}
+
+@mixin closeFormIcon() {
+    .close-form {
+        position: absolute;
+        color: $basicBlack;
+        top: 0.4em;
+        right: 0.4em;
+        transform: rotate(45deg);
+        font-size: 3.5em;
+        color: $custom-label-color;
+        cursor: pointer;
+    }
 }
 
 @mixin custom-button($width, $color) {
@@ -110,7 +119,7 @@
     }
 }
 
-@mixin fabButton($color) {
+@mixin fabButton($color: $robosoftPink) {
     .fab-button {
         background-color: $color;
         outline: none;

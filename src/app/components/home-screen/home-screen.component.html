@@ -1,3 +1,7 @@
+
+<div class="overlay" [hidden]="!overlay">
+</div>
+
 <div class="container-fluid pt-3 pb-3 pl-0 pl-lg-5">
     <div class="row">
         <div class="col-12 col-sm-4 col-lg-3 pr-sm-0">
@@ -90,10 +94,10 @@
                         <div routerLink="/update-password" class="light-pink-background shadow">
                             Change Password
                         </div>
-                        <div class="light-pink-background shadow">
+                        <div class="light-pink-background shadow" (click)="toggleModal('s-admin')">
                             Add/Remove Super Admins
                         </div>
-                        <div class="light-pink-background shadow">
+                        <div class="light-pink-background shadow" (click)="toggleModal('admin')">
                             Add/Remove Admins
                         </div>
                     </span>
@@ -109,5 +113,19 @@
     </div>
 </div>
 
-<div class="overlay" [hidden]="!overlay">
+<!-- Button trigger modal -->
+<button [hidden]="true" type="button" id="myModal" data-toggle="modal" data-target=".bd-example-modal-lg"></button>
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="false"  #closeBtn>
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <app-add-remove-admins [addAdminType]="addAdminType"></app-add-remove-admins>
+            </div>
+      </div>
+    </div>
 </div>

@@ -90,3 +90,18 @@
         }
     }
 }
+ 
+.modal {
+    .modal-lg {
+        max-width: 73.5em;
+        span {
+            font-size: 1.6em;
+        }
+        .modal-content {
+            border-radius: 1.25em; // 20px;
+            .modal-header {
+                border: none;
+            }
+        }
+    }
+}
