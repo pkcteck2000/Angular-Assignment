@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import * as $ from 'jquery';
 
 @Component({
@@ -23,10 +24,10 @@ export class HomeScreenComponent implements OnInit {
     this.addAdminType = addType=="admin"?"Add/Remove Admins":"Add/Remove Super Admins";
     $("#myModal").click();
   }
-
-  constructor() { }
+  
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
-    this.toggleModal("admin");
+    
   }
 }

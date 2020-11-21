@@ -18,6 +18,9 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { HomeLeftBarComponent } from './components/home-left-bar/home-left-bar.component';
 import { HomeScreenMenuComponent } from './components/home-screen-menu/home-screen-menu.component';
 import { AddRemoveAdminsComponent } from './components/add-remove-admins/add-remove-admins.component';
+import { MaterialFileInputModule } from 'ngx-material-file-input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,11 @@ import { AddRemoveAdminsComponent } from './components/add-remove-admins/add-rem
     MatButtonModule,
     MatIconModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MaterialFileInputModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

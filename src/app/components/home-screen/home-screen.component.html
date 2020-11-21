@@ -1,4 +1,3 @@
-
 <div class="overlay" [hidden]="!overlay">
 </div>
 
@@ -64,23 +63,23 @@
                                     <span matSuffix class="input-suffix">Days</span>
                                 </mat-form-field>
 
+
                                 <mat-form-field class="input-area-medium pr-2" appearance="outline">
                                     <mat-label>Select Content PPT File</mat-label>
-                                    <input matInput type="text" />
+                                    <ngx-mat-file-input></ngx-mat-file-input>
                                     <mat-icon matSuffix class="icon-pink">cloud_upload</mat-icon>
                                 </mat-form-field>
 
                                 <mat-form-field class="input-area-medium pl-2" appearance="outline">
                                     <mat-label>Select participant xl sheet</mat-label>
+                                    <ngx-mat-file-input></ngx-mat-file-input>
                                     <mat-icon matSuffix class="icon-pink">cloud_upload</mat-icon>
-                                    <input matInput type="text" />
                                 </mat-form-field>
 
                                 <mat-form-field class="input-area-full" appearance="outline">
                                     <mat-label>Mail Body</mat-label>
                                     <textarea matInput></textarea>
                                 </mat-form-field>
-
                             </div>
                         </form>
                     </div>
