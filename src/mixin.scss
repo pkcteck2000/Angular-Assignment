@@ -96,6 +96,17 @@
             outline: none;
         }
     }
+    
+    .custom-btn:after{
+        content: '';
+        position: absolute;
+        bottom: 0%;
+        left: 5%;
+        width: 80%;
+        height: 8%;
+        border-radius: 50%;
+        box-shadow: 0 0.18em 1.5em $robosoftPink;
+    }
 }
 
 @mixin input-area-full(){
@@ -123,7 +134,18 @@
     .fab-button {
         background-color: $color;
         outline: none;
-    }    
+    }   
+    .fab-button:after{
+        content: '';
+        position: absolute;
+        bottom: 0%;
+        top: 50%;
+        left: 5%;
+        width: 90%;
+        height: 30%;
+        border-radius: 50%;
+        box-shadow: 0 0.6em 1.8em $robosoftPink;
+    } 
 }
 
 @mixin lightPinkBackground() {

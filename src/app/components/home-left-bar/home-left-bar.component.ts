@@ -20,5 +20,3 @@ export class HomeLeftBarComponent implements OnInit {
   }
 
 }
-
-//textSlice:0:20
