@@ -13,6 +13,7 @@ export class HomeScreenComponent implements OnInit {
   closeIcon = "add";
   overlay = false;
   addAdminType = "";
+  enableModal: boolean = false;
 
   toggleOverlayMode = () => {
     this.overlay = !this.overlay;
@@ -20,6 +21,12 @@ export class HomeScreenComponent implements OnInit {
   }
 
   toggleModal = ( addType ) => {
+    
+    this.enableModal = false;
+    setTimeout(() => {
+        this.enableModal = true;
+    }, 10);
+
     this.addAdminType = addType=="admin"?"Add/Remove Admins":"Add/Remove Super Admins";
     $("#myModal").click();
   }
@@ -32,6 +39,6 @@ export class HomeScreenComponent implements OnInit {
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
-    
+    this.toggleModal("admin");
   }
 }

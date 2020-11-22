@@ -36,7 +36,7 @@
                 <div class="col-12 col-md-3 pl-0 pl-md-3">
                     <mat-form-field class="input-area-full" appearance="outline">
                         <mat-label>Enter Name</mat-label>
-                        <input matInput type="text" value="{{ admin.name }}" [disabled]="true"/>
+                        <input matInput type="text" value="{{ admin.name }}" />
                     </mat-form-field>
                 </div>
                 <div class="col-12 col-md-3 pl-0">
@@ -52,10 +52,10 @@
                     </mat-form-field>
                 </div>
                 <div class="col-12 col-md-12 col-lg-2 pl-0 mt-2">
-                    <button type="button" mat-fab class="fab-button" (click)="updateAdminlist(admin)" aria-label="edit icon">
+                    <button type="button" mat-fab class="fab-button" aria-label="edit icon">
                         <mat-icon>edit</mat-icon>
                     </button>
-                    <button type="button" mat-fab class="fab-button ml-3" (click)="deleteFromAdminlist(admin)" aria-label="delete icon">
+                    <button type="button" mat-fab class="fab-button ml-3" aria-label="delete icon" (click)="deleteFromAdminlist(admin)">
                         <mat-icon>delete</mat-icon>
                     </button>
                 </div>

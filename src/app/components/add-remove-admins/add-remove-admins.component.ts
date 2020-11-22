@@ -1,7 +1,9 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
-import { threadId } from 'worker_threads';
+import { AdmininfoService } from 'src/app/services/admininfo.service';
+import { SuperAdmininfoService } from 'src/app/services/super-admininfo.service';
 import { AdminInfo } from '../../shared/interface/admin-info';
+
 
 @Component({
   selector: 'app-add-remove-admins',
@@ -22,40 +24,56 @@ export class AddRemoveAdminsComponent implements OnInit {
 
   constructor(
     private router: Router,
-  ) { }
+    private admininfoService: AdmininfoService,
+    private superAdmininfoService: SuperAdmininfoService
+  ) {}
+
+
+  getAdminData = () => {
+    if(this.addAdminType === 'Add/Remove Admins'){
+      this.adminInfoList = this.admininfoService.getAdminDetails();
+    }
+    else {
+      this.adminInfoList = this.superAdmininfoService.getSuperAdminDetails();
+    }
+  }
 
   addToAdminList = () => {
     let singleAdminInfo = {...this.adminInfo};
     this.adminInfo.name = "";
     this.adminInfo.employeeCode = "";
     this.adminInfo.mailId = "";
-    this.adminInfoList.unshift(singleAdminInfo);
+
+    if(this.addAdminType === 'Add/Remove Admins'){
+      this.admininfoService.addAdminData(singleAdminInfo);
+    }
+    else {
+      this.superAdmininfoService.addSuperAdminData(singleAdminInfo);
+    }
+    this.getAdminData();
   }
 
   deleteFromAdminlist = ( admin ) => {
-    this.adminInfoList.forEach((value, index) => {
-      if (value === admin) {
-        this.adminInfoList.splice(index, 1);
-      }
-    });
+    if(this.addAdminType === 'Add/Remove Admins'){
+      this.admininfoService.removeAdminData(admin.employeeCode);
+    }
+    else {
+      this.superAdmininfoService.removeSuperAdminData(admin.employeeCode);
+    }
+    this.getAdminData();
   }
 
-  updateAdminList = () => {
-    console.log(this.addAdminType);
-  }
-
-  updateAdminAction = () => {
-    console.log(this.addAdminType);
-    console.log(this.adminInfoList);
-    // TODO: Update Admin process
+  updateAdminList = ( ) => {
+    console.log();
   }
 
   cancelPressed = () => {
-    this.adminInfoList = [];
     this.toggleModal.emit('admin');
   }
   
   ngOnInit(): void {
+    this.getAdminData();
+    console.log(this.addAdminType);
   }
 
 }
