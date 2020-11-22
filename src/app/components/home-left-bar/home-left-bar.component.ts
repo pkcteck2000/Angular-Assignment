@@ -16,6 +16,16 @@ export class HomeLeftBarComponent implements OnInit {
 
   constructor() { }
 
+  newQuestionnaireAction = () => {
+    console.log("New Questionnaires");
+    // TODO: New Questionnaires action
+  }
+
+  optionsSelector = ( option ) => {
+    console.log(option);
+    // TODO: Options Selector action
+  }
+
   ngOnInit(): void {
   }
 

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import * as $ from 'jquery';
 
@@ -20,11 +20,15 @@ export class HomeScreenComponent implements OnInit {
   }
 
   toggleModal = ( addType ) => {
-    console.log(addType);
     this.addAdminType = addType=="admin"?"Add/Remove Admins":"Add/Remove Super Admins";
     $("#myModal").click();
   }
   
+  menuClickListner = ( actionType ) => {
+    console.log(`${actionType} is clicked`);
+    // TODO: Do the action for save, preview, publish, add_alert, article
+  }
+
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {

@@ -84,7 +84,7 @@
                         </form>
                     </div>
                     <div class="col-12 col-lg-4 mt-4 pb-5">
-                        <app-home-screen-menu></app-home-screen-menu>
+                        <app-home-screen-menu (menuClickListner)="menuClickListner($event)" ></app-home-screen-menu>
                     </div>
                 </div>
 
@@ -124,7 +124,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <app-add-remove-admins (notify)="toggleModal($event)" [addAdminType]="addAdminType"></app-add-remove-admins>
+                <app-add-remove-admins (toggleModal)="toggleModal($event)" [addAdminType]="addAdminType"></app-add-remove-admins>
             </div>
       </div>
     </div>

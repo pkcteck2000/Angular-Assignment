@@ -1,7 +1,7 @@
 <div class="container-fluid d-flex justify-content-center">
     <div class="container">
         <div class="form-container pt-3">
-            <form class="form">
+            <form class="form" [formGroup]="loginForm" (ngSubmit)="loginAction(loginForm.value)">
                 <div class="form-title">
                     <span class="text">
                         Login
@@ -9,14 +9,14 @@
                 </div>
                 <mat-form-field class="input-area" appearance="outline">
                     <mat-label>Enter Username</mat-label>
-                    <input matInput />
+                    <input matInput type="text" formControlName="username" />
                 </mat-form-field>
                 <mat-form-field class="input-area" appearance="outline">
                     <mat-label>Enter Password</mat-label>
-                    <input matInput type="password" />
+                    <input matInput type="password" formControlName="password" />
                 </mat-form-field>
                 <div class="d-flex justify-content-center pt-3">
-                    <button class="custom-btn shadow" mat-raised-button>
+                    <button class="custom-btn shadow" type="submit" mat-raised-button>
                         <span class="btn-text">Login</span>
                     </button>
                 </div>

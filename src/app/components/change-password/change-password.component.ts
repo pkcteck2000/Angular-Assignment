@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-change-password',
@@ -8,12 +9,20 @@ import { Router } from '@angular/router';
 })
 export class ChangePasswordComponent implements OnInit {
 
-  constructor(
-    private router: Router
-  ) { }
+  changePasswordForm: any;
 
-  closeForm = () => {
-    this.router.navigate(['/']);
+  constructor(
+    private formBuilder: FormBuilder
+  ) {
+    this.changePasswordForm = this.formBuilder.group({
+      password_1: "",
+      password_2: ""
+    });
+   }
+
+  changePasswordAction = ( formData ) => {
+    console.log(formData);
+    // TODO: change password process
   }
 
   ngOnInit(): void {

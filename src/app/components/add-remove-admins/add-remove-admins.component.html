@@ -10,62 +10,63 @@
                 <div class="col-12 col-md-3 pl-0 pl-md-3">
                     <mat-form-field class="input-area-full" appearance="outline">
                         <mat-label>Enter Name</mat-label>
-                        <input matInput type="password" />
+                        <input matInput type="text" [(ngModel)] = "adminInfo.name" name="name" />
                     </mat-form-field>
                 </div>
                 <div class="col-12 col-md-3 pl-0">
                     <mat-form-field class="input-area-full" appearance="outline">
                         <mat-label>Enter Employee Code</mat-label>
-                        <input matInput type="password" />
+                        <input matInput type="text" [(ngModel)] = "adminInfo.employeeCode" name="employeeCode" />
                     </mat-form-field>
                 </div>
                 <div class="col-12 col-md-4 pl-0">
                     <mat-form-field class="input-area-full" appearance="outline">
                         <mat-label>Enter Mail ID</mat-label>
-                        <input matInput type="password" />
+                        <input matInput type="text" [(ngModel)] = "adminInfo.mailId" name="mailId"/>
                     </mat-form-field>
                 </div>
                 <div class="col-12 col-md-2 pl-0 mt-1">
-                    <button type="button" mat-fab class="fab-button" aria-label="add icon">
+                    <button type="button" mat-fab class="fab-button" aria-label="add icon" (click)="addToAdminList()">
                         <mat-icon>add</mat-icon>
                     </button>
                 </div>
             </div>
 
-            <div class="row pl-3 pt-4 editing-area-2">
+            <div *ngFor="let admin of adminInfoList" class="row pl-3 pt-4 editing-area-2">
                 <div class="col-12 col-md-3 pl-0 pl-md-3">
                     <mat-form-field class="input-area-full" appearance="outline">
                         <mat-label>Enter Name</mat-label>
-                        <input matInput type="password" />
+                        <input matInput type="text" value="{{ admin.name }}" [disabled]="true"/>
                     </mat-form-field>
                 </div>
                 <div class="col-12 col-md-3 pl-0">
                     <mat-form-field class="input-area-full" appearance="outline">
                         <mat-label>Enter Employee Code</mat-label>
-                        <input matInput type="password" />
+                        <input matInput type="text" value="{{ admin.employeeCode }}" />
                     </mat-form-field>
                 </div>
                 <div class="col-12 col-md-4 pl-0">
                     <mat-form-field class="input-area-full" appearance="outline">
                         <mat-label>Enter Mail ID</mat-label>
-                        <input matInput type="password" />
+                        <input matInput type="text" value="{{ admin.mailId }}" />
                     </mat-form-field>
                 </div>
                 <div class="col-12 col-md-12 col-lg-2 pl-0 mt-2">
-                    <button type="button" mat-fab class="fab-button" aria-label="edit icon">
+                    <button type="button" mat-fab class="fab-button" (click)="updateAdminlist(admin)" aria-label="edit icon">
                         <mat-icon>edit</mat-icon>
                     </button>
-                    <button type="button" mat-fab class="fab-button ml-3" aria-label="delete icon">
+                    <button type="button" mat-fab class="fab-button ml-3" (click)="deleteFromAdminlist(admin)" aria-label="delete icon">
                         <mat-icon>delete</mat-icon>
                     </button>
                 </div>
             </div>
+
             <div class="row mb-5">
                 <div class="col-12 col-md-10 col-lg-10 form-button float-lg-right pt-4">
-                    <button type="button" class="custom-btn shadow" mat-raised-button (click)="updateAdmin()">
+                    <button type="button" class="custom-btn shadow" mat-raised-button (click)="updateAdminAction()">
                         <div class="btn-text">Update</div>
                     </button>
-                    <button type="button" class="custom-btn ml-3 mr-4 mr-sm-0 shadow" mat-raised-button type="button" (click)="notify.emit('admin')">
+                    <button type="button" class="custom-btn ml-3 mr-4 mr-sm-0 shadow" mat-raised-button type="button" (click)="cancelPressed()">
                         <div class="btn-text">Cancel</div>
                     </button>
                 </div>

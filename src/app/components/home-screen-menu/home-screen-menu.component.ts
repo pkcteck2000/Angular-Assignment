@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-home-screen-menu',
@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeScreenMenuComponent implements OnInit {
 
+  @Output() menuClickListner = new EventEmitter();
+
   constructor() { }
+
+  optionClicked = ( option ) => {
+    this.menuClickListner.emit(option);
+  }
 
   ngOnInit(): void {
   }
