@@ -1,5 +1,5 @@
-@import "../../../variables.scss";
-@import "../../../mixin.scss";
+@import "../../../../../variables.scss";
+@import "../../../../../mixin.scss";
 
 @include overriding-material-input-box();
 @include overlayMode();

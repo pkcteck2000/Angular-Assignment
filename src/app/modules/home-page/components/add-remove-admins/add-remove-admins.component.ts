@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { AdmininfoService } from 'src/app/services/admininfo.service';
 import { SuperAdmininfoService } from 'src/app/services/super-admininfo.service';
-import { AdminInfo } from '../../shared/interface/admin-info';
+import { AdminInfo } from '../../../../shared/interface/admin-info';
 
 
 @Component({
@@ -63,7 +63,7 @@ export class AddRemoveAdminsComponent implements OnInit {
     this.getAdminData();
   }
 
-  updateAdminList = ( ) => {
+  updateAdminAction = () => {
     console.log();
   }
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-change-password',
@@ -11,7 +12,8 @@ export class ChangePasswordComponent implements OnInit {
   changePasswordForm: any;
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private location: Location
   ) {
     this.changePasswordForm = this.formBuilder.group({
       password_1: "",
@@ -22,6 +24,10 @@ export class ChangePasswordComponent implements OnInit {
   changePasswordAction = ( formData ) => {
     console.log(formData);
     // TODO: change password process
+  }
+
+  closeForm = () => {
+    this.location.back();
   }
 
   ngOnInit(): void {

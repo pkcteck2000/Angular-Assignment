@@ -39,6 +39,6 @@ export class HomeScreenComponent implements OnInit {
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
-    this.toggleModal("admin");
+    
   }
 }
