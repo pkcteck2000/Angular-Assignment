@@ -8,6 +8,9 @@ import { TextSlicePipe } from './text-slice/text-slice.pipe';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    TextSlicePipe
   ]
 })
 

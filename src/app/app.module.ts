@@ -10,7 +10,7 @@ import { ChangePasswordComponent } from './components/change-password/change-pas
 import { MessageDisplayComponent } from './components/message-display/message-display.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularMaterialsModule } from './modules/angular-materials/angular-materials.module';
-import { PipeModule } from './pipes/pipe.module';
+import { PipeModule } from './modules/pipes/pipe.module';
 
 @NgModule({
   declarations: [

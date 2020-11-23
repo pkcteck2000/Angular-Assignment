@@ -28,12 +28,10 @@
             margin-top: 5%;
             margin-bottom: 5%;
             .mat-icon {
-                float: right;
                 font-weight: bold;
                 font-size: 1.87em; //30px;
                 display: flex;
-                align-items: center;
-                margin-right: 5%;
+                align-items: flex-end;
             }
         }
         .active {
