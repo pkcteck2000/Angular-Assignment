@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { AdminInfo } from '../shared/interface/admin-info';
+import { IAdminInfo } from '../shared/interface/IAdminInfo';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SuperAdmininfoService {
 
-  adminData: AdminInfo[] = [
+  adminData: IAdminInfo[] = [
     {
       name: 'Super Kevin',
       employeeCode: 'RT02485',
@@ -21,7 +21,7 @@ export class SuperAdmininfoService {
 
   constructor() { }
 
-  getSuperAdminDetails = (): AdminInfo[] => {
+  getSuperAdminDetails = (): IAdminInfo[] => {
     return this.adminData;
   }
 

@@ -1,8 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
-import { AdmininfoService } from 'src/app/services/admininfo.service';
+import { AdmininfoService } from 'src/app/services/admin/admininfo.service';
 import { SuperAdmininfoService } from 'src/app/services/super-admininfo.service';
-import { AdminInfo } from '../../../../shared/interface/admin-info';
+import { IAdminInfo } from '../../../../shared/interface/IAdminInfo';
 
 
 @Component({
@@ -15,8 +15,8 @@ export class AddRemoveAdminsComponent implements OnInit {
   @Input() addAdminType;
   @Output() toggleModal = new EventEmitter();
 
-  adminInfoList: AdminInfo[] = [];
-  adminInfo: AdminInfo = {
+  adminInfoList: IAdminInfo[] = [];
+  adminInfo: IAdminInfo = {
     name: '',
     employeeCode : '',
     mailId: ''

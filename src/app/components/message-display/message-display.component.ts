@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataServiceService } from 'src/app/services/data-service.service';
+import { DataServiceService } from 'src/app/services/manageDataForUi/data-service.service';
 
 @Component({
   selector: 'app-message-display',

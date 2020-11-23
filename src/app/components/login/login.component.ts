@@ -1,8 +1,9 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { DataServiceService } from '../../services/data-service.service';
+import { DataServiceService } from '../../services/manageDataForUi/data-service.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private router: Router,
     private dataServiceService: DataServiceService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private authService: AuthService
   ) {
       this.loginForm = this.formBuilder.group({
         username: "",
@@ -25,10 +27,10 @@ export class LoginComponent implements OnInit {
       });
   }
 
-
   loginAction = ( formData ) => {
-    console.log(formData);
-    // TODO: login process
+    if(this.authService.loginUser( formData )){
+      this.router.navigate(['']);
+    }
   }
 
   forgotPassword = () => {

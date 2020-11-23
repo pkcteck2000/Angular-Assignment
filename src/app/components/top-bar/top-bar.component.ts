@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserDetailsService } from 'src/app/services/user/user-details.service';
+import { IUser } from 'src/app/shared/interface/IUser';
 
 @Component({
   selector: 'app-top-bar',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopBarComponent implements OnInit {
 
-  constructor() { }
+  isAuthenticated: boolean = false;
+  userData: IUser;
+
+  constructor(
+    private userDetailsService: UserDetailsService
+  ) { }
 
   ngOnInit(): void {
+    this.userDetailsService.isAuthenticated.subscribe(isLogin => {
+      if(isLogin) {
+        this.userData = this.userDetailsService.getUserDetails();
+        this.isAuthenticated = isLogin;
+      }
+    });
   }
 
 }
