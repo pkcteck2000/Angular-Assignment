@@ -8,11 +8,13 @@ export class AdmininfoService {
 
   adminData: IAdminInfo[] = [
     {
+      id: '1',
       name: 'Kevin',
       employeeCode: 'RT02485',
       mailId: 'Kevin@robosoftin.com'
     },
     {
+      id: '2',
       name: 'John',
       employeeCode: 'RT02486',
       mailId: 'John.Doe@robosoftin.com'
@@ -23,16 +25,8 @@ export class AdmininfoService {
     return this.adminData;
   }
 
-  addAdminData = ( data ) => {
-    this.adminData.unshift(data);
-  }
-
-  removeAdminData = ( employeeCode ) => {
-    this.adminData.forEach((value, index) => {
-      if (value.employeeCode === employeeCode) {
-        this.adminData.splice(index, 1);
-      }
-    });
+  updateAdminDetails = ( data ) => {
+    this.adminData = data;
   }
   
   constructor() { }

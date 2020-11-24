@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { IUser } from 'src/app/shared/interface/IUser';
-import { userData } from 'src/app/shared/data/user-info';import { Router } from '@angular/router';
+import { userData } from 'src/app/shared/data/userInfo';
+import { Router } from '@angular/router';
 import { UserDetailsService } from '../user/user-details.service';
 
 @Injectable({

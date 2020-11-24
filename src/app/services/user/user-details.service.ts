@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { userData } from 'src/app/shared/data/user-info';
+import { userData } from 'src/app/shared/data/userInfo';
 import { IUser } from 'src/app/shared/interface/IUser';
 
 @Injectable({

@@ -1,22 +1,24 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { AdmininfoService } from 'src/app/services/admin/admininfo.service';
-import { SuperAdmininfoService } from 'src/app/services/super-admininfo.service';
+import { SuperAdmininfoService } from 'src/app/services/admin/super-admininfo.service';
 import { IAdminInfo } from '../../../../shared/interface/IAdminInfo';
-
 
 @Component({
   selector: 'app-add-remove-admins',
   templateUrl: './add-remove-admins.component.html',
   styleUrls: ['./add-remove-admins.component.scss']
 })
+
 export class AddRemoveAdminsComponent implements OnInit {
 
   @Input() addAdminType;
   @Output() toggleModal = new EventEmitter();
 
-  adminInfoList: IAdminInfo[] = [];
+  enableRowKey = 0;
+  adminInfoListTemp: IAdminInfo[] = [];
   adminInfo: IAdminInfo = {
+    id: '',
     name: '',
     employeeCode : '',
     mailId: ''
@@ -28,44 +30,62 @@ export class AddRemoveAdminsComponent implements OnInit {
     private superAdmininfoService: SuperAdmininfoService
   ) {}
 
-
-  getAdminData = () => {
-    if(this.addAdminType === 'Add/Remove Admins'){
-      this.adminInfoList = this.admininfoService.getAdminDetails();
-    }
-    else {
-      this.adminInfoList = this.superAdmininfoService.getSuperAdminDetails();
-    }
-  }
-
+  ////////////////// Local operations //////////////////////////////
   addToAdminList = () => {
     let singleAdminInfo = {...this.adminInfo};
     this.adminInfo.name = "";
     this.adminInfo.employeeCode = "";
     this.adminInfo.mailId = "";
-
-    if(this.addAdminType === 'Add/Remove Admins'){
-      this.admininfoService.addAdminData(singleAdminInfo);
-    }
-    else {
-      this.superAdmininfoService.addSuperAdminData(singleAdminInfo);
-    }
-    this.getAdminData();
+    this.adminInfoListTemp.unshift(singleAdminInfo);    
   }
 
   deleteFromAdminlist = ( admin ) => {
+    this.adminInfoListTemp.forEach((value, index) => {
+      if (value.employeeCode === admin.employeeCode) {
+        this.adminInfoListTemp.splice(index, 1);
+      }
+    });
+  }
+
+  toggleEnableMode = ( key ) => {
+    if(key === this.enableRowKey) {
+      this.enableRowKey = 0;
+    }
+    else{
+      this.enableRowKey = key;
+    }
+  }
+  ////////////////////////////////////////////////////////////////
+
+  //////////////////// Operations in service //////////////////////
+  getAdminData = () => {
     if(this.addAdminType === 'Add/Remove Admins'){
-      this.admininfoService.removeAdminData(admin.employeeCode);
+      //this.adminInfoListTemp = JSON.parse(JSON.stringify(this.admininfoService.getAdminDetails()));
+      //this.adminInfoListTemp = [ ...this.admininfoService.getAdminDetails() ];
+      this.adminInfoListTemp = [];
+      this.admininfoService.getAdminDetails().forEach((admin) => {
+        this.adminInfoListTemp.push({...admin});
+      });
     }
     else {
-      this.superAdmininfoService.removeSuperAdminData(admin.employeeCode);
+      this.adminInfoListTemp = [];
+      this.superAdmininfoService.getSuperAdminDetails().forEach((admin) => {
+        this.adminInfoListTemp.push({...admin});
+      });
     }
-    this.getAdminData();
   }
 
   updateAdminAction = () => {
-    console.log();
+    if(this.addAdminType === 'Add/Remove Admins'){
+      this.admininfoService.updateAdminDetails(this.adminInfoListTemp);
+      this.getAdminData();
+    }
+    else {
+      this.superAdmininfoService.updateSuperAdminDetails(this.adminInfoListTemp);
+      this.getAdminData();
+    }
   }
+  ////////////////////////////////////////////////////////////////
 
   cancelPressed = () => {
     this.toggleModal.emit('admin');
@@ -75,5 +95,4 @@ export class AddRemoveAdminsComponent implements OnInit {
     this.getAdminData();
     console.log(this.addAdminType);
   }
-
 }

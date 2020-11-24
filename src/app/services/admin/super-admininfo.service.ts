@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IAdminInfo } from '../shared/interface/IAdminInfo';
+import { IAdminInfo } from '../../shared/interface/IAdminInfo';
 
 @Injectable({
   providedIn: 'root'
@@ -8,11 +8,13 @@ export class SuperAdmininfoService {
 
   adminData: IAdminInfo[] = [
     {
+      id: '1',
       name: 'Super Kevin',
       employeeCode: 'RT02485',
       mailId: 'Kevin@robosoftin.com'
     },
     {
+      id: '1',
       name: 'Super John',
       employeeCode: 'RT02486',
       mailId: 'John.Doe@robosoftin.com'
@@ -25,16 +27,8 @@ export class SuperAdmininfoService {
     return this.adminData;
   }
 
-  addSuperAdminData = ( data ) => {
-    this.adminData.unshift(data);
-  }
-
-  removeSuperAdminData = ( employeeCode ) => {
-    this.adminData.forEach((value, index) => {
-      if (value.employeeCode === employeeCode) {
-        this.adminData.splice(index, 1);
-      }
-    });
+  updateSuperAdminDetails = ( data ) => {
+    this.adminData = data;
   }
   
 }
