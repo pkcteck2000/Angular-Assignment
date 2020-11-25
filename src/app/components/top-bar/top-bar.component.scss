@@ -1,7 +1,7 @@
 @import "../../../variables.scss";
 
 .navbar {
-    box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 15px 0 $topBarShadow;
     .navbar-brand {
         width: 65%;
         .top-bar-logo-img {
