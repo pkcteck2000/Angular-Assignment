@@ -206,5 +206,13 @@
         .mat-form-field.mat-focused .mat-form-field-label {
             color: $custom-label-color;
         }
+
+        .mat-datepicker-toggle .mat-icon-button {
+            outline: none;
+        }
+
+        .mat-calendar-body-selected {
+            background-color: $robosoftPink;
+        }
     }
 }
