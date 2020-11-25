@@ -18,11 +18,14 @@ export class AuthService {
     private userDetailsService: UserDetailsService
   ) { }
 
-  loginUser = (loginData) => {
+  loginUser = (loginData, alreadyLogin=false) => {
     this.userInfo.forEach((value, index) => {
       if (value.userName === loginData.username && value.password === loginData.password) {
         this.isAuthenticated = true;
-        localStorage.setItem('userCredentioal', JSON.stringify(loginData));
+        if(!alreadyLogin) {
+          loginData['expireTime'] = new Date().getTime()+5*60000;
+          localStorage.setItem('userCredentioal', JSON.stringify(loginData));
+        }
         this.userDetailsService.setUserDetails(this.isAuthenticated);
         return this.isAuthenticated;
       }
@@ -32,8 +35,12 @@ export class AuthService {
 
   checkIsUserAuthenticated = () => {
     let loginData = JSON.parse(localStorage.getItem('userCredentioal'));
-    if (loginData) {
-      return this.loginUser(loginData);
+    let currentTime = new Date().getTime();
+    if (loginData && loginData.expireTime > currentTime) {
+      console.log(currentTime);
+      console.log(loginData.expireTime);
+      console.log(loginData.expireTime - currentTime);
+      return this.loginUser(loginData, true);
     }
     return false;
   }
