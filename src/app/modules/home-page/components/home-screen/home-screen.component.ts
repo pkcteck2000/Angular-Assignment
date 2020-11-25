@@ -55,6 +55,6 @@ export class HomeScreenComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.toggleModal('admin');
+    
   }
 }
