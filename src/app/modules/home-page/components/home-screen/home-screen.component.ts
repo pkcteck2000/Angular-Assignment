@@ -26,7 +26,9 @@ export class HomeScreenComponent implements OnInit {
       startDate: "",
       endDate: "",
       reminder: "",
-      mailBody: ""
+      mailBody: "",
+      pptFile: "",
+      xlSheetFile: ""
     });
   }
 
@@ -48,7 +50,7 @@ export class HomeScreenComponent implements OnInit {
 
   menuClickListner = (actionType) => {
     console.log(`${actionType} is clicked`);
-    console.log(this.detailsForm.value);
+    console.log(this.detailsForm.value.pptFile);
     // TODO: Do the action for save, preview, publish, add_alert, article
   }
 
