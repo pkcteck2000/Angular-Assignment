@@ -14,6 +14,21 @@ export class HomeScreenComponent implements OnInit {
   overlay = false;
   addAdminType = "";
   enableModal: boolean = false;
+  detailsForm:  any;
+
+  constructor(private formBuilder: FormBuilder) { 
+    this.detailsForm = this.formBuilder.group({
+      title: "",
+      description: "",
+      buttonTitle: "",
+      buttonText: "",
+      chceckBoxText: "",
+      startDate: "",
+      endDate: "",
+      reminder: "",
+      mailBody: ""
+    });
+  }
 
   toggleOverlayMode = () => {
     this.overlay = !this.overlay;
@@ -33,10 +48,9 @@ export class HomeScreenComponent implements OnInit {
 
   menuClickListner = (actionType) => {
     console.log(`${actionType} is clicked`);
+    console.log(this.detailsForm.value);
     // TODO: Do the action for save, preview, publish, add_alert, article
   }
-
-  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
 

@@ -37,9 +37,8 @@ export class AuthService {
     let loginData = JSON.parse(localStorage.getItem('userCredentioal'));
     let currentTime = new Date().getTime();
     if (loginData && loginData.expireTime > currentTime) {
-      console.log(currentTime);
-      console.log(loginData.expireTime);
-      console.log(loginData.expireTime - currentTime);
+      //console.log(currentTime);
+      //console.log(loginData.expireTime);
       return this.loginUser(loginData, true);
     }
     return false;
