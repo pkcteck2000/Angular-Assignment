@@ -4,10 +4,10 @@
 .left-bar {
     background-color: $basicWhite;
     border-radius: 20px;
-    
+
     @include custom-button(100%, $robosoftPink);
 
-    .left-bar-header{
+    .left-bar-header {
         opacity: 0.87;
         color: $basicBlack;
         font-family: $roboto;

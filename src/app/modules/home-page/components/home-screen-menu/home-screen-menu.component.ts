@@ -11,7 +11,7 @@ export class HomeScreenMenuComponent implements OnInit {
 
   constructor() { }
 
-  optionClicked = ( option ) => {
+  optionClicked = (option) => {
     this.menuClickListner.emit(option);
   }
 

@@ -9,16 +9,15 @@ import { DataServiceService } from 'src/app/services/manageDataForUi/data-servic
 export class MessageDisplayComponent implements OnInit {
 
   message = "Message...";
-  
+
   constructor(
     private dataServiceService: DataServiceService,
   ) { }
 
   ngOnInit(): void {
-    this.dataServiceService.currentMessage.subscribe( (message) => 
-      {
-        this.message = message;
-      }
+    this.dataServiceService.currentMessage.subscribe((message) => {
+      this.message = message;
+    }
     )
   }
 

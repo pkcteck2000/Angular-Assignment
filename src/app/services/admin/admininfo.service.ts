@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { adminData } from 'src/app/shared/data/adminInfo';
 import { IAdminInfo } from "../../shared/interface/IAdminInfo";
 
 @Injectable({
@@ -6,28 +7,15 @@ import { IAdminInfo } from "../../shared/interface/IAdminInfo";
 })
 export class AdmininfoService {
 
-  adminData: IAdminInfo[] = [
-    {
-      id: '1',
-      name: 'Kevin',
-      employeeCode: 'RT02485',
-      mailId: 'Kevin@robosoftin.com'
-    },
-    {
-      id: '2',
-      name: 'John',
-      employeeCode: 'RT02486',
-      mailId: 'John.Doe@robosoftin.com'
-    }
-  ]
+  adminData: IAdminInfo[] = adminData;
 
   getAdminDetails = (): IAdminInfo[] => {
     return this.adminData;
   }
 
-  updateAdminDetails = ( data ) => {
+  updateAdminDetails = (data) => {
     this.adminData = data;
   }
-  
+
   constructor() { }
 }

@@ -16,17 +16,17 @@ export class UserDetailsService {
 
   constructor() { }
 
-  setUserDetails = ( isLogin ) => {
+  setUserDetails = (isLogin) => {
     let userCredentioal = JSON.parse(localStorage.getItem('userCredentioal'));
     this.userInfo.forEach((value, index) => {
-        if(value.userName === userCredentioal.username){
-          this.userData = value;
-        }
+      if (value.userName === userCredentioal.username) {
+        this.userData = value;
+      }
     });
     this.authentication.next(isLogin);
   }
 
-  getUserDetails = ():IUser => {
+  getUserDetails = (): IUser => {
     return this.userData;
   }
 }

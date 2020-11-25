@@ -6,7 +6,7 @@
 
 .container-fluid {
     background-color: $homePageBackground;
-    
+
     .row {
         .right-bar {
             background-color: $basicWhite;
@@ -22,7 +22,7 @@
                     letter-spacing: 0.15px;
                     line-height: 24px;
                 }
-                .input-form{
+                .input-form {
                     @include input-area-full();
                     @include input-area-medium();
 
@@ -48,7 +48,6 @@
 }
 
 .toggle-options-container {
-
     position: relative;
     display: flex;
     flex-direction: column;
@@ -77,7 +76,7 @@
 
         .light-pink-background {
             border-radius: 24px;
-            background-color: $toggleOptionsBackground; 
+            background-color: $toggleOptionsBackground;
             width: 194.6px;
             height: 33.6px;
             margin: 0.5em;
@@ -90,7 +89,7 @@
         }
     }
 }
- 
+
 .modal {
     .modal-lg {
         max-width: 73.5em;

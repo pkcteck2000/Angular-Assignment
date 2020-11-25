@@ -18,7 +18,7 @@ export class TopBarComponent implements OnInit {
 
   ngOnInit(): void {
     this.userDetailsService.isAuthenticated.subscribe(isLogin => {
-      if(isLogin) {
+      if (isLogin) {
         this.userData = this.userDetailsService.getUserDetails();
         this.isAuthenticated = isLogin;
       }

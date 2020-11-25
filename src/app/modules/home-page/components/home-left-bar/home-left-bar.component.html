@@ -6,12 +6,8 @@
         </button>
     </div>
     <div class="options-container list-group mt-4 pb-5">
-        <div
-            *ngFor="let value of OPTIONS; index as i" 
-            [ngClass]="{'option' : true, 'active' : i === 0}"
-            data-toggle="list" href="#"
-            (click)="optionsSelector(value)"
-        >
+        <div *ngFor="let value of OPTIONS; index as i" [ngClass]="{'option' : true, 'active' : i === 0}"
+            data-toggle="list" href="#" (click)="optionsSelector(value)">
             <span class="option-text">{{ value | textSlice:0:20 }}</span>
             <mat-icon class="mat-icon float-right">keyboard_arrow_right</mat-icon>
         </div>

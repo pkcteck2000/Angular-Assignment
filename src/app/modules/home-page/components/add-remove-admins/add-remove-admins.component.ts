@@ -20,7 +20,7 @@ export class AddRemoveAdminsComponent implements OnInit {
   adminInfo: IAdminInfo = {
     id: '',
     name: '',
-    employeeCode : '',
+    employeeCode: '',
     mailId: ''
   };
 
@@ -28,18 +28,18 @@ export class AddRemoveAdminsComponent implements OnInit {
     private router: Router,
     private admininfoService: AdmininfoService,
     private superAdmininfoService: SuperAdmininfoService
-  ) {}
+  ) { }
 
   ////////////////// Local operations //////////////////////////////
   addToAdminList = () => {
-    let singleAdminInfo = {...this.adminInfo};
+    let singleAdminInfo = { ...this.adminInfo };
     this.adminInfo.name = "";
     this.adminInfo.employeeCode = "";
     this.adminInfo.mailId = "";
-    this.adminInfoListTemp.unshift(singleAdminInfo);    
+    this.adminInfoListTemp.unshift(singleAdminInfo);
   }
 
-  deleteFromAdminlist = ( admin ) => {
+  deleteFromAdminlist = (admin) => {
     this.adminInfoListTemp.forEach((value, index) => {
       if (value.employeeCode === admin.employeeCode) {
         this.adminInfoListTemp.splice(index, 1);
@@ -47,11 +47,11 @@ export class AddRemoveAdminsComponent implements OnInit {
     });
   }
 
-  toggleEnableMode = ( key ) => {
-    if(key === this.enableRowKey) {
+  toggleEnableMode = (key) => {
+    if (key === this.enableRowKey) {
       this.enableRowKey = 0;
     }
-    else{
+    else {
       this.enableRowKey = key;
     }
   }
@@ -59,24 +59,24 @@ export class AddRemoveAdminsComponent implements OnInit {
 
   //////////////////// Operations in service //////////////////////
   getAdminData = () => {
-    if(this.addAdminType === 'Add/Remove Admins'){
+    if (this.addAdminType === 'Add/Remove Admins') {
       //this.adminInfoListTemp = JSON.parse(JSON.stringify(this.admininfoService.getAdminDetails()));
       //this.adminInfoListTemp = [ ...this.admininfoService.getAdminDetails() ];
       this.adminInfoListTemp = [];
       this.admininfoService.getAdminDetails().forEach((admin) => {
-        this.adminInfoListTemp.push({...admin});
+        this.adminInfoListTemp.push({ ...admin });
       });
     }
     else {
       this.adminInfoListTemp = [];
       this.superAdmininfoService.getSuperAdminDetails().forEach((admin) => {
-        this.adminInfoListTemp.push({...admin});
+        this.adminInfoListTemp.push({ ...admin });
       });
     }
   }
 
   updateAdminAction = () => {
-    if(this.addAdminType === 'Add/Remove Admins'){
+    if (this.addAdminType === 'Add/Remove Admins') {
       this.admininfoService.updateAdminDetails(this.adminInfoListTemp);
       this.getAdminData();
     }
@@ -90,7 +90,7 @@ export class AddRemoveAdminsComponent implements OnInit {
   cancelPressed = () => {
     this.toggleModal.emit('admin');
   }
-  
+
   ngOnInit(): void {
     this.getAdminData();
     console.log(this.addAdminType);

@@ -21,14 +21,14 @@ export class LoginComponent implements OnInit {
     private formBuilder: FormBuilder,
     private authService: AuthService
   ) {
-      this.loginForm = this.formBuilder.group({
-        username: "",
-        password: ""
-      });
+    this.loginForm = this.formBuilder.group({
+      username: "",
+      password: ""
+    });
   }
 
-  loginAction = ( formData ) => {
-    if(this.authService.loginUser( formData )){
+  loginAction = (formData) => {
+    if (this.authService.loginUser(formData)) {
       this.router.navigate(['']);
     }
   }

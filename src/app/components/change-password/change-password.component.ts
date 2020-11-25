@@ -19,9 +19,9 @@ export class ChangePasswordComponent implements OnInit {
       password_1: "",
       password_2: ""
     });
-   }
+  }
 
-  changePasswordAction = ( formData ) => {
+  changePasswordAction = (formData) => {
     console.log(formData);
     // TODO: change password process
   }

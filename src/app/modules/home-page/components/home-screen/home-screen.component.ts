@@ -17,21 +17,21 @@ export class HomeScreenComponent implements OnInit {
 
   toggleOverlayMode = () => {
     this.overlay = !this.overlay;
-    this.closeIcon = this.closeIcon === "add"? "close" : "add";
+    this.closeIcon = this.closeIcon === "add" ? "close" : "add";
   }
 
-  toggleModal = ( addType ) => {
-    
+  toggleModal = (addType) => {
+
     this.enableModal = false;
     setTimeout(() => {
-        this.enableModal = true;
+      this.enableModal = true;
     }, 10);
 
-    this.addAdminType = addType=="admin"?"Add/Remove Admins":"Add/Remove Super Admins";
+    this.addAdminType = addType == "admin" ? "Add/Remove Admins" : "Add/Remove Super Admins";
     $("#myModal").click();
   }
-  
-  menuClickListner = ( actionType ) => {
+
+  menuClickListner = (actionType) => {
     console.log(`${actionType} is clicked`);
     // TODO: Do the action for save, preview, publish, add_alert, article
   }
@@ -39,6 +39,6 @@ export class HomeScreenComponent implements OnInit {
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
-    
+
   }
 }

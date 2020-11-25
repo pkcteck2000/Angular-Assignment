@@ -8,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class HomeLeftBarComponent implements OnInit {
 
   OPTIONS = [
-      "Secure coding Guidelence",
-      "ISMS Questionnaire",
-      "PA Questionnaire",
-      "Process Guidelines"
+    "Secure coding Guidelence",
+    "ISMS Questionnaire",
+    "PA Questionnaire",
+    "Process Guidelines"
   ];
 
   constructor() { }
@@ -21,7 +21,7 @@ export class HomeLeftBarComponent implements OnInit {
     // TODO: New Questionnaires action
   }
 
-  optionsSelector = ( option ) => {
+  optionsSelector = (option) => {
     console.log(option);
     // TODO: Options Selector action
   }
