@@ -14,9 +14,9 @@ export class HomeScreenComponent implements OnInit {
   overlay = false;
   addAdminType = "";
   enableModal: boolean = false;
-  detailsForm:  any;
+  detailsForm: any;
 
-  constructor(private formBuilder: FormBuilder) { 
+  constructor(private formBuilder: FormBuilder) {
     this.detailsForm = this.formBuilder.group({
       title: "",
       description: "",
@@ -55,6 +55,6 @@ export class HomeScreenComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    this.toggleModal('admin');
   }
 }

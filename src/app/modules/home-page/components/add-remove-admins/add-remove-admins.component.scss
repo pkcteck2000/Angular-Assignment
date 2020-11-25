@@ -8,7 +8,7 @@
     }
     .form {
         @include formTitle("left", 0);
-        @include input-area-full();
+        @include input-area-full(0%);
         @include input-area-medium();
         @include input-area-small();
         @include fabButton();

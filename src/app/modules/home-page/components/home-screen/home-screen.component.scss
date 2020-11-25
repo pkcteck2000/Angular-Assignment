@@ -3,6 +3,7 @@
 
 @include overriding-material-input-box();
 @include overlayMode();
+@include modelStyle();
 
 .container-fluid {
     background-color: $homePageBackground;
@@ -23,6 +24,7 @@
                     line-height: 24px;
                 }
                 .input-form {
+                    outline: none !important;
                     @include input-area-full();
                     @include input-area-medium();
 
@@ -86,21 +88,6 @@
             justify-content: center;
             outline: none;
             cursor: pointer;
-        }
-    }
-}
-
-.modal {
-    .modal-lg {
-        max-width: 73.5em;
-        span {
-            font-size: 1.6em;
-        }
-        .modal-content {
-            border-radius: 1.25em; // 20px;
-            .modal-header {
-                border: none;
-            }
         }
     }
 }

@@ -7,7 +7,7 @@
 
         .container {
             background-color: $basicWhite;
-            border-radius: 1.50em;
+            border-radius: 1.5em;
             width: $width * 1em;
             height: $height * 1em;
             transition: 1s;
@@ -51,10 +51,10 @@
                 }
             }
         }
-    }    
+    }
 }
 
-@mixin formTitle($textAlign:center, $padding:0.9em) {
+@mixin formTitle($textAlign: center, $padding: 0.9em) {
     .form-title {
         text-align: $textAlign;
         padding: $padding;
@@ -63,7 +63,7 @@
         font-weight: 31.25em;
         letter-spacing: 0;
         line-height: 1.9em;
-    }    
+    }
 }
 
 @mixin closeFormIcon() {
@@ -86,19 +86,19 @@
         height: 3.5em;
         background-color: $color;
         color: $basicWhite;
-        .btn-text{
+        .btn-text {
             font-family: $roboto;
             letter-spacing: 0.078em; // 1.25px;
-            line-height: .75em; // 28px;
+            line-height: 0.75em; // 28px;
             white-space: normal;
         }
         &:focus {
             outline: none;
         }
     }
-    
-    .custom-btn:after{
-        content: '';
+
+    .custom-btn:after {
+        content: "";
         position: absolute;
         bottom: 0%;
         left: 5%;
@@ -109,21 +109,21 @@
     }
 }
 
-@mixin input-area-full(){
+@mixin input-area-full($paddingTop: 2.5%) {
     .input-area-full {
-        padding-top: 2.5%;
+        padding-top: $paddingTop;
         width: 100%;
     }
 }
 
-@mixin input-area-medium(){
+@mixin input-area-medium() {
     .input-area-medium {
         padding-top: 2.5%;
-        width: 50%
+        width: 50%;
     }
 }
 
-@mixin input-area-small(){
+@mixin input-area-small() {
     .input-area-small {
         padding-top: 2.5%;
         width: 33.3%;
@@ -134,9 +134,9 @@
     .fab-button {
         background-color: $color;
         outline: none;
-    }   
-    .fab-button:after{
-        content: '';
+    }
+    .fab-button:after {
+        content: "";
         position: absolute;
         bottom: 0%;
         top: 50%;
@@ -145,13 +145,13 @@
         height: 30%;
         border-radius: 50%;
         box-shadow: 0 0.6em 1.8em $robosoftPink;
-    } 
+    }
 }
 
 @mixin lightPinkBackground() {
     .light-pink-background {
         border-radius: 1.5em; // 24px
-        background-color: $lightPink; 
+        background-color: $lightPink;
     }
 }
 
@@ -166,27 +166,45 @@
         background-color: $overlayBackground;
         z-index: 1;
         cursor: pointer;
-    } 
+    }
 }
 
+@mixin modelStyle {
+    .modal {
+        .modal-lg {
+            max-width: 73.5em;
+            span {
+                font-size: 1.6em;
+            }
+            .modal-content {
+                border-radius: 1.25em; // 20px;
+                .modal-header {
+                    border: none;
+                    .close {
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+}
 
 @mixin overriding-material-input-box() {
     ::ng-deep {
- 
         .mat-form-field-appearance-outline .mat-form-field-outline {
-           color: $custom-label-color;
+            color: $custom-label-color;
         }
-     
+
         .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
-           color: $custom-label-color;
+            color: $custom-label-color;
         }
-        
+
         .mat-form-field-label {
-           color: $custom-label-color;
+            color: $custom-label-color;
         }
-    
+
         .mat-form-field.mat-focused .mat-form-field-label {
-           color: $custom-label-color;
+            color: $custom-label-color;
         }
-    }   
+    }
 }

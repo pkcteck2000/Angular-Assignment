@@ -10,6 +10,7 @@ import { Location } from '@angular/common';
 export class ChangePasswordComponent implements OnInit {
 
   changePasswordForm: any;
+  isPasswordMatching = true;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -22,8 +23,14 @@ export class ChangePasswordComponent implements OnInit {
   }
 
   changePasswordAction = (formData) => {
-    console.log(formData);
-    // TODO: change password process
+    if (!(formData.password_1 === formData.password_2)) {
+      this.isPasswordMatching = false;
+    }
+    else {
+      this.isPasswordMatching = true;
+      // TODO: check for password pattern
+      // TODO: change password action
+    }
   }
 
   closeForm = () => {
