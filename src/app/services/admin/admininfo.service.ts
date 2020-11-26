@@ -14,6 +14,8 @@ export class AdmininfoService {
   }
 
   updateAdminDetails = (data) => {
+    console.log(data);
+    console.log(this.adminData);
     this.adminData = data;
   }
 

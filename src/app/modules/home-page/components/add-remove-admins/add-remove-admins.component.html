@@ -36,27 +36,27 @@
                 <div class="col-12 col-md-3 pl-0 pl-md-3">
                     <mat-form-field class="input-area-full" appearance="outline">
                         <mat-label>Enter Name</mat-label>
-                        <input matInput type="text" [(ngModel)]="adminInfoListTemp[i].name"
-                            [readonly]="!(adminInfoListTemp[i].id === enableRowKey)" />
+                        <input matInput type="text" [(ngModel)]="admin.name"
+                            [readonly]="!(admin.id === enableRowKey)" />
                     </mat-form-field>
                 </div>
                 <div class="col-12 col-md-3 pl-0">
                     <mat-form-field class="input-area-full" appearance="outline">
                         <mat-label>Enter Employee Code</mat-label>
-                        <input matInput type="text" [(ngModel)]="adminInfoListTemp[i].employeeCode"
-                            [readonly]="!(adminInfoListTemp[i].id === enableRowKey)" />
+                        <input matInput type="text" [(ngModel)]="admin.employeeCode"
+                            [readonly]="!(admin.id === enableRowKey)" />
                     </mat-form-field>
                 </div>
                 <div class="col-12 col-md-4 pl-0">
                     <mat-form-field class="input-area-full" appearance="outline">
                         <mat-label>Enter Mail ID</mat-label>
-                        <input matInput type="text" [(ngModel)]="adminInfoListTemp[i].mailId"
-                            [readonly]="!(adminInfoListTemp[i].id === enableRowKey)" />
+                        <input matInput type="text" [(ngModel)]="admin.mailId"
+                            [readonly]="!(admin.id === enableRowKey)" />
                     </mat-form-field>
                 </div>
                 <div class="col-12 col-md-12 col-lg-2 pl-0">
                     <button type="button" mat-fab class="fab-button" aria-label="edit icon"
-                        (click)="toggleEnableMode(adminInfoListTemp[i].id)">
+                        (click)="toggleEnableMode(admin.id)">
                         <mat-icon>edit</mat-icon>
                     </button>
                     <button type="button" mat-fab class="fab-button ml-3" aria-label="delete icon"
