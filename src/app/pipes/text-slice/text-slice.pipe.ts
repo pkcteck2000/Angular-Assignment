@@ -9,7 +9,7 @@ export class TextSlicePipe implements PipeTransform {
     if (value.length <= 20) {
       return value;
     }
-    let slicedValue = value.slice(args[0], args[1]);
+    const slicedValue = value.slice(args[0], args[1]);
     return `${slicedValue}...`;
   }
 }

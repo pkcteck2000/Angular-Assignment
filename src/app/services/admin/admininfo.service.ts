@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { adminData } from 'src/app/shared/data/adminInfo';
-import { IAdminInfo } from "../../shared/interface/IAdminInfo";
+import { IAdminInfo } from '../../shared/interface/IAdminInfo';
 
 @Injectable({
   providedIn: 'root'

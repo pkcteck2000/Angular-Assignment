@@ -10,31 +10,31 @@ import * as $ from 'jquery';
 
 export class HomeScreenComponent implements OnInit {
 
-  closeIcon = "add";
+  closeIcon = 'add';
   overlay = false;
-  addAdminType = "";
-  enableModal: boolean = false;
+  addAdminType = '';
+  enableModal = false;
   detailsForm: any;
 
   constructor(private formBuilder: FormBuilder) {
     this.detailsForm = this.formBuilder.group({
-      title: "",
-      description: "",
-      buttonTitle: "",
-      buttonText: "",
-      chceckBoxText: "",
-      startDate: "",
-      endDate: "",
-      reminder: "",
-      mailBody: "",
-      pptFile: "",
-      xlSheetFile: ""
+      title: '',
+      description: '',
+      buttonTitle: '',
+      buttonText: '',
+      chceckBoxText: '',
+      startDate: '',
+      endDate: '',
+      reminder: '',
+      mailBody: '',
+      pptFile: '',
+      xlSheetFile: ''
     });
   }
 
   toggleOverlayMode = () => {
     this.overlay = !this.overlay;
-    this.closeIcon = this.closeIcon === "add" ? "close" : "add";
+    this.closeIcon = this.closeIcon === 'add' ? 'close' : 'add';
   }
 
   toggleModal = (addType) => {
@@ -44,8 +44,8 @@ export class HomeScreenComponent implements OnInit {
       this.enableModal = true;
     }, 10);
 
-    this.addAdminType = addType == "admin" ? "Add/Remove Admins" : "Add/Remove Super Admins";
-    $("#myModal").click();
+    this.addAdminType = addType === 'admin' ? 'Add/Remove Admins' : 'Add/Remove Super Admins';
+    $('#myModal').click();
   }
 
   menuClickListner = (actionType) => {

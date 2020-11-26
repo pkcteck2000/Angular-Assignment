@@ -23,8 +23,8 @@ export class ChangePasswordComponent implements OnInit {
     private dataServiceService: DataServiceService,
   ) {
     this.changePasswordForm = this.formBuilder.group({
-      password_1: "",
-      password_2: ""
+      password_1: '',
+      password_2: ''
     });
   }
 
@@ -43,7 +43,7 @@ export class ChangePasswordComponent implements OnInit {
       else {
         this.ifFormateMatching = true;
         // TODO: change password action
-        let message = "Password changed Successfully"
+        const message = 'Password changed Successfully';
         this.dataServiceService.changeMessage(message);
         this.router.navigate(['message-display']);
       }

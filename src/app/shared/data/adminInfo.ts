@@ -13,7 +13,7 @@ export const adminData: IAdminInfo[] = [
     employeeCode: 'RT98765',
     mailId: 'jane@robosoftin.com'
   }
-]
+];
 
 export const superAdminData: IAdminInfo[] = [
   {
@@ -28,4 +28,4 @@ export const superAdminData: IAdminInfo[] = [
     employeeCode: 'RT23456',
     mailId: 'john@robosoftin.com'
   }
-]
+];

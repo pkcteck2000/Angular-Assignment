@@ -17,7 +17,7 @@ export class UserDetailsService {
   constructor() { }
 
   setUserDetails = (isLogin) => {
-    let userCredentioal = JSON.parse(localStorage.getItem('userCredentioal'));
+    const userCredentioal = JSON.parse(localStorage.getItem('userCredentioal'));
     this.userInfo.forEach((value, index) => {
       if (value.userName === userCredentioal.username) {
         this.userData = value;

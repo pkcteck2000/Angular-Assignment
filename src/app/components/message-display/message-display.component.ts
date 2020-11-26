@@ -8,7 +8,7 @@ import { DataServiceService } from 'src/app/services/manageDataForUi/data-servic
 })
 export class MessageDisplayComponent implements OnInit {
 
-  message = "Message...";
+  message = 'Message...';
 
   constructor(
     private dataServiceService: DataServiceService,
@@ -18,7 +18,7 @@ export class MessageDisplayComponent implements OnInit {
     this.dataServiceService.currentMessage.subscribe((message) => {
       this.message = message;
     }
-    )
+    );
   }
 
 }

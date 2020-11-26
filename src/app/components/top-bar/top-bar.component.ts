@@ -9,7 +9,7 @@ import { IUser } from 'src/app/shared/interface/IUser';
 })
 export class TopBarComponent implements OnInit {
 
-  isAuthenticated: boolean = false;
+  isAuthenticated = false;
   userData: IUser;
 
   constructor(

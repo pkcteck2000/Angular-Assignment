@@ -27,8 +27,8 @@ export class AuthService {
       }
       else if (value.userName === loginData.username && value.password === loginData.password) {
         this.isAuthenticated = true;
-        let expireTime = new Date().getTime() + 5 * 60000;
-        localStorage.setItem('userCredentioal', JSON.stringify({ 'username': loginData.username, expireTime }));
+        const expireTime = new Date().getTime() + 5 * 60000;
+        localStorage.setItem('userCredentioal', JSON.stringify({ username: loginData.username, expireTime }));
         this.userDetailsService.setUserDetails(this.isAuthenticated);
         return this.isAuthenticated;
       }
@@ -38,8 +38,8 @@ export class AuthService {
   }
 
   checkIsUserAuthenticated = () => {
-    let loginData = JSON.parse(localStorage.getItem('userCredentioal'));
-    let currentTime = new Date().getTime();
+    const loginData = JSON.parse(localStorage.getItem('userCredentioal'));
+    const currentTime = new Date().getTime();
     if (loginData && loginData.expireTime > currentTime) {
       return this.loginUser(loginData, true);
     }

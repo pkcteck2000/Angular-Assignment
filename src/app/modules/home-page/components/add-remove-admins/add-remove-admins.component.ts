@@ -32,10 +32,10 @@ export class AddRemoveAdminsComponent implements OnInit {
 
   ////////////////// Local operations //////////////////////////////
   addToAdminList = () => {
-    let singleAdminInfo = { ...this.adminInfo };
-    this.adminInfo.name = "";
-    this.adminInfo.employeeCode = "";
-    this.adminInfo.mailId = "";
+    const singleAdminInfo = { ...this.adminInfo };
+    this.adminInfo.name = '';
+    this.adminInfo.employeeCode = '';
+    this.adminInfo.mailId = '';
     this.adminInfoListTemp.unshift(singleAdminInfo);
   }
 
@@ -60,8 +60,8 @@ export class AddRemoveAdminsComponent implements OnInit {
   //////////////////// Operations in service //////////////////////
   getAdminData = () => {
     if (this.addAdminType === 'Add/Remove Admins') {
-      //this.adminInfoListTemp = JSON.parse(JSON.stringify(this.admininfoService.getAdminDetails()));
-      //this.adminInfoListTemp = [ ...this.admininfoService.getAdminDetails() ];
+      // this.adminInfoListTemp = JSON.parse(JSON.stringify(this.admininfoService.getAdminDetails()));
+      // this.adminInfoListTemp = [ ...this.admininfoService.getAdminDetails() ];
       this.adminInfoListTemp = [];
       this.admininfoService.getAdminDetails().forEach((admin) => {
         this.adminInfoListTemp.push({ ...admin });
@@ -93,6 +93,6 @@ export class AddRemoveAdminsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAdminData();
-    //console.log(this.addAdminType);
+    // console.log(this.addAdminType);
   }
 }

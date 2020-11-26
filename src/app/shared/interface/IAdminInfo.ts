@@ -1,5 +1,5 @@
 export interface IAdminInfo {
-    id: string,
+    id: string;
     name: string;
     employeeCode: string;
     mailId: string;

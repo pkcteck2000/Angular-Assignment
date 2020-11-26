@@ -24,8 +24,8 @@ export class LoginComponent implements OnInit {
     private authService: AuthService
   ) {
     this.loginForm = this.formBuilder.group({
-      username: "",
-      password: ""
+      username: '',
+      password: ''
     });
   }
 
@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
   }
 
   forgotPassword = () => {
-    let message = "Check your email. We have sent a link to update your password "
+    const message = 'Check your email. We have sent a link to update your password ';
     this.dataServiceService.changeMessage(message);
     this.router.navigate(['message-display']);
   }
