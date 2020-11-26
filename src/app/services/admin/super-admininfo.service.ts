@@ -16,6 +16,8 @@ export class SuperAdmininfoService {
   }
 
   updateSuperAdminDetails = (data) => {
+    console.log(data);
+    console.log(this.adminData);
     this.adminData = data;
   }
 

@@ -93,6 +93,6 @@ export class AddRemoveAdminsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAdminData();
-    console.log(this.addAdminType);
+    //console.log(this.addAdminType);
   }
 }
