@@ -50,7 +50,7 @@ export class HomeScreenComponent implements OnInit {
 
   menuClickListner = (actionType) => {
     console.log(`${actionType} is clicked`);
-    console.log(this.detailsForm.value.pptFile);
+    console.log(this.detailsForm.value);
     // TODO: Do the action for save, preview, publish, add_alert, article
   }
 

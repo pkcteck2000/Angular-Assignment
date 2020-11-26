@@ -36,7 +36,7 @@ export class ChangePasswordComponent implements OnInit {
     else {
       this.isPasswordMatching = true;
       console.log(formData.password_1.length);
-      if(formData.password_1.length<8){
+      if (formData.password_1.length < 8) {
         this.ifFormateMatching = false;
         // TODO: check for password pattern
       }

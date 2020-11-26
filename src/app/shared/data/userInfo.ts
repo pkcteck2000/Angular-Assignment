@@ -9,8 +9,6 @@ export const userData: IUser[] = [
     {
         "userName": "prem",
         "password": "122",
-        "profileImage": "https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        "profileImage": "https://pbs.twimg.com/profile_images/1143197290510745600/eG8FVJUV.png"
     }
 ]
-
-// https://pbs.twimg.com/profile_images/1143197290510745600/eG8FVJUV.png

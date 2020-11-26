@@ -1,29 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
 
 // Font Family
-$roboto: 'Roboto', sans-serif;
-$inter: 'Inter', sans-serif;
-
+$roboto: "Roboto", sans-serif;
+$inter: "Inter", sans-serif;
 
 // Colors
 // Basic colors
-$basicBlack : #000;
-$basicWhite : #fff;
+$basicBlack: #000;
+$basicWhite: #fff;
 
-$basicRed : #f00;
+$basicRed: #f00;
 $basicGreen: #0f0;
 $basicBlue: #00f;
 
 // New colors
-$robosoftPink: #D92756;
-$footerTextColor:  rgba(0,0,0,0.6);
-$footerBackground: rgba(0,0,0,0.02);
-$custom-label-color: rgba(0, 0, 0, .6);
-$pinkGradientBackground: linear-gradient(52.03deg, #7A7FC8 0%, #BD385B 100%);
-$homePageBackground: #F7F7F7;
-$lightPink: rgba(217,39,86,0.05);
-$overlayBackground: rgba(0,0,0,0.5);
+$robosoftPink: #d92756;
+$footerTextColor: rgba(0, 0, 0, 0.6);
+$footerBackground: rgba(0, 0, 0, 0.02);
+$custom-label-color: rgba(0, 0, 0, 0.6);
+$pinkGradientBackground: linear-gradient(52.03deg, #7a7fc8 0%, #bd385b 100%);
+$homePageBackground: #f7f7f7;
+$lightPink: rgba(217, 39, 86, 0.05);
+$overlayBackground: rgba(0, 0, 0, 0.5);
 $toggleOptionsBackground: #fcf4f6;
-$dashedBorder: #A2A2A2;
-$topBarShadow:  rgba(0, 0, 0, 0.1);
+$dashedBorder: #a2a2a2;
+$topBarShadow: rgba(0, 0, 0, 0.1);
