@@ -14,7 +14,8 @@ import { AuthService } from 'src/app/services/auth/auth.service';
 export class LoginComponent implements OnInit {
 
   loginForm: any;
-  loginError = false;
+  loginError;
+  isFormSubmited = false;
 
   constructor(
     private router: Router,
@@ -29,6 +30,7 @@ export class LoginComponent implements OnInit {
   }
 
   loginAction = (formData) => {
+    this.isFormSubmited = true;
     if (this.authService.loginUser(formData)) {
       this.loginError = false;
       this.router.navigate(['']);

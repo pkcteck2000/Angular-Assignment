@@ -14,7 +14,7 @@
                 <mat-form-field class="input-area" appearance="outline">
                     <mat-label>Enter Password</mat-label>
                     <input matInput type="password" formControlName="password" />
-                    <mat-hint [hidden]="!loginError" class="text-danger">Sorry error while login
+                    <mat-hint [hidden]="!(isFormSubmited && loginError)" class="text-danger">Sorry error while login
                     </mat-hint>
                 </mat-form-field>
                 <div class="d-flex justify-content-center pt-3">
