@@ -39,10 +39,11 @@ export class HomeScreenComponent implements OnInit {
 
   toggleModal = (addType) => {
 
-    this.enableModal = false;
-    setTimeout(() => {
+    this.enableModal = true;
+
+    /*setTimeout(() => {
       this.enableModal = true;
-    }, 10);
+    }, 10);*/
 
     this.addAdminType = addType === 'admin' ? 'Add/Remove Admins' : 'Add/Remove Super Admins';
     $('#myModal').click();
