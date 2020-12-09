@@ -40,10 +40,11 @@ export class AddRemoveAdminsComponent implements OnInit {
       ){
       const singleAdminInfo = { ...this.adminInfo };
       this.adminInfoListTemp.unshift(singleAdminInfo);
-    }
-    this.adminInfo.name = '';
-    this.adminInfo.employeeCode = '';
-    this.adminInfo.mailId = '';
+
+      this.adminInfo.name = '';
+      this.adminInfo.employeeCode = '';
+      this.adminInfo.mailId = '';
+    } 
   }
 
   deleteFromAdminlist = (admin) => {
