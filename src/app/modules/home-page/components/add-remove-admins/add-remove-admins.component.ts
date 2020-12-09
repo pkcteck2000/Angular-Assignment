@@ -32,7 +32,12 @@ export class AddRemoveAdminsComponent implements OnInit {
 
   ////////////////// Local operations //////////////////////////////
   addToAdminList = () => {
-    if (this.adminInfo.name && this.adminInfo.employeeCode && this.adminInfo.mailId){
+    if (
+        this.adminInfo.name && 
+        this.adminInfo.employeeCode && 
+        this.adminInfo.mailId && 
+        (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(this.adminInfo.mailId))
+      ){
       const singleAdminInfo = { ...this.adminInfo };
       this.adminInfoListTemp.unshift(singleAdminInfo);
     }
